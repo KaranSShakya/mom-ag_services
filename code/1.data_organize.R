@@ -11,6 +11,10 @@ value <- read_excel("data/modified.xlsx",
                     sheet = "ES-value")
 benefit <- read_excel("data/modified.xlsx", 
                       sheet = "ES-Beneficiaries ")
+div <- read_excel("data/modified.xlsx", 
+                       sheet = "division", col_names = FALSE)
+names(div)[1] <- "eco_ser"
+names(div)[2] <- "eco_type"
 
 #Changing data structure - long
 current <- current %>% 
@@ -40,6 +44,7 @@ survey <- merge(x=survey, y=value, by=c("Country", "site", "Type of farming",
                                           "eco_ser"))
 survey <- merge(x=survey, y=benefit, by=c("Country", "site", "Type of farming", 
                                         "eco_ser"))
+survey <- merge(x=survey, y=div, by="eco_ser")
 
 write.csv(survey, file="data/survey.csv")
 
