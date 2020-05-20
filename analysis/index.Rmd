@@ -21,7 +21,7 @@ names(survey)[5] <- "farming"
 
 ### Average Scatter Plot - Current
 Since showing 100 variables on one graph is hard, I divided the ecosystem services into 3 (Provisioning, Cultural, Regulating). The first one is simply an avgerage of the survey results.
-```{r eval=T, echo=F}
+```{r eval=T, echo=F, fig.height=10, fig.width=5}
 cur <- survey %>% 
   select(-7,-8,-9)
 cur.pa <- cur %>% 
