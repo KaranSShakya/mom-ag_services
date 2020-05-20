@@ -21,7 +21,7 @@ names(survey)[5] <- "farming"
 ```
 
 ### Average Scatter Plot - Current
-Since showing 100 variables on one graph is hard, I divided the ecosystem services into 3 (Provisioning, Cultural, Regulating). The first one is simply an avgerage of the survey results.
+Since showing 100 variables on one graph is hard, I divided the ecosystem services into 3 (Provisioning, Cultural, Regulating). I put *supporting* into *provisioning*.
 ```{r eval=T, echo=F, fig.height=20, fig.width=10}
 cur <- survey %>% 
   select(-7,-8,-9)
@@ -45,19 +45,26 @@ cur.ra <- cur %>%
   ungroup()
 a <- ggplot(cur.pa, aes(x=avg_res, y=eco_ser))+
   geom_point(size=1)+
-  labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
-  scale_x_continuous(limits = c(0,5))
+  labs(title="ES-Current : Provisioning", x="Ranking", y="Ecosystem Services")+
+  scale_x_continuous(limits = c(1,5))+
+  geom_vline(xintercept = 3, color="red")
 b <- ggplot(cur.ca, aes(x=avg_res, y=eco_ser))+
   geom_point(size=1)+
-  labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
-  scale_x_continuous(limits = c(0,5))
+  labs(title="ES-Current : Cultural", x="Ranking", y="Ecosystem Services")+
+  scale_x_continuous(limits = c(1,5))+
+  geom_vline(xintercept = 3, color="red")
 c <- ggplot(cur.ra, aes(x=avg_res, y=eco_ser))+
   geom_point(size=1)+
-  labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
-  scale_x_continuous(limits = c(0,5))
-grid.arrange(a,b,c, ncol=3)
+  labs(title="ES-Current : Regulating", x="Ranking", y="Ecosystem Services")+
+  scale_x_continuous(limits = c(1,5))+
+  geom_vline(xintercept = 3, color="red")
+grid.arrange(a,b,c, ncol=1)
 ```
+This is the most general scatterplot of the survey results for current. Since **cultural** and **regulating** do not have any variable that averaged below 3 (satisfactory), we can conclude that most villages are happy or at least satisfied with these ES. However, there are a lot of variables below 3 for **provisional**, which might suggest that we focus on this ES.
 
+***
+
+Next step: more exploratory analysis on provisional ES. 
 
 
 
