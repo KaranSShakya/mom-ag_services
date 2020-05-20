@@ -14,6 +14,7 @@ Hello! This is a GitHub website I built for your dataset. I will update this pag
 library(tidyverse)
 library(ggthemes)
 library(ggrepel)
+library(gridExtra)
 
 survey <- read_csv("data/survey.csv")
 names(survey)[5] <- "farming"
@@ -21,7 +22,7 @@ names(survey)[5] <- "farming"
 
 ### Average Scatter Plot - Current
 Since showing 100 variables on one graph is hard, I divided the ecosystem services into 3 (Provisioning, Cultural, Regulating). The first one is simply an avgerage of the survey results.
-```{r eval=T, echo=F, fig.height=10, fig.width=5}
+```{r eval=T, echo=F, fig.height=20, fig.width=10}
 cur <- survey %>% 
   select(-7,-8,-9)
 cur.pa <- cur %>% 
@@ -30,10 +31,31 @@ cur.pa <- cur %>%
   group_by(eco_ser) %>% 
   summarise(avg_res=mean(current)) %>% 
   ungroup()
-ggplot(cur.pa, aes(x=avg_res, y=eco_ser))+
+cur.ca <- cur %>% 
+  filter(eco_type=="Cultural") %>% 
+  select(2,6) %>% 
+  group_by(eco_ser) %>% 
+  summarise(avg_res=mean(current)) %>% 
+  ungroup()
+cur.ra <- cur %>% 
+  filter(eco_type=="Regulating") %>% 
+  select(2,6) %>% 
+  group_by(eco_ser) %>% 
+  summarise(avg_res=mean(current)) %>% 
+  ungroup()
+a <- ggplot(cur.pa, aes(x=avg_res, y=eco_ser))+
   geom_point(size=1)+
   labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
   scale_x_continuous(limits = c(0,5))
+b <- ggplot(cur.ca, aes(x=avg_res, y=eco_ser))+
+  geom_point(size=1)+
+  labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
+  scale_x_continuous(limits = c(0,5))
+c <- ggplot(cur.ra, aes(x=avg_res, y=eco_ser))+
+  geom_point(size=1)+
+  labs(title="Average of all Farming Systems", x="Ranking", y="Ecosystem Services")+
+  scale_x_continuous(limits = c(0,5))
+grid.arrange(a,b,c, ncol=3)
 ```
 
 
