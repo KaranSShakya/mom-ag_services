@@ -7,7 +7,7 @@ library(ggrepel)
 survey <- read_csv("data/survey.csv")
 names(survey)[5] <- "farming"
 
-#Current Basic----------------------------
+#Current Basic ----------------------------
 cur <- survey %>% 
   select(-7,-8,-9)
 
@@ -75,5 +75,31 @@ filter(cur_dem, eco_type=="Regulating") %>%
   scale_color_manual(values = c("red2", "royalblue", "green3"))  
   
   
+  
+  
+
+
+
+#Current-Demand same plot - revised --------------
+cur_dem <- survey %>% 
+  select(2,6,7,10) %>% 
+  group_by(eco_ser, eco_type) %>% 
+  summarize(avg_c=mean(current), avg_d=mean(demand)) %>% 
+  ungroup() %>% 
+  na.omit()
+cur_dem$avg_c <- round(cur_dem$avg_c, 1)
+
+cur_dem$avg_d <- round(cur_dem$avg_d, 0)
+cur_dem$avg_d <- factor(cur_dem$avg_d)
+levels(cur_dem$avg_d) <- c("decreases", "stays the same", "increases")
+
+cur_dem <- cur_dem %>% 
+  group_by(eco_ser) %>% 
+  arrange(eco_type)
+
+#scale_x_continuous(limits = c(1,5))+
+ # labs(color="Demand in Future", title="Provisioning",
+  #     x="Current", y="Ecosystem Services")+
+  #scale_color_manual(values = c("red2", "royalblue", "green3"))
   
   

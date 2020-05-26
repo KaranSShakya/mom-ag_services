@@ -9,6 +9,9 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - test: GitHub Page
+    href: https://github.com/KaranSShakya
 output:
   workflowr::wflow_html:
     toc: yes
