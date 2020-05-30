@@ -1,10 +1,10 @@
 ---
-title: "About"
+title: "Synthesis Analysis - HKH"
+site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
-    toc: false
+    toc: true
 editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
