@@ -47,8 +47,12 @@ w1.table %>%
 
 
 ```{r eval=T, echo=F}
-w2.table %>% 
+w2.table %>%
   select(1,2) %>% 
   gt() %>% 
   tab_header(title="Index Keywords")
 ````
+
+![](w2.wordcloud.jpeg)
+
+
