@@ -5,6 +5,9 @@ navbar:
   left:
   - text: Home
     href: index.html
+  right:
+  - text: GitHub Pages
+    href: https://github.com/KaranSShakya
 output:
   workflowr::wflow_html:
     toc: yes
