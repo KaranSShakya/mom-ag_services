@@ -486,16 +486,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree0f3b10f4110b8ce2a4f131713a516d22f900e34ctargetblank0f3b10fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/0f3b10f4110b8ce2a4f131713a516d22f900e34c" target="_blank">0f3b10f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree53ac1ae089a2a15eb9d40d4073509aaf327d2ec7targetblank53ac1aea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/53ac1ae089a2a15eb9d40d4073509aaf327d2ec7" target="_blank">53ac1ae</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree0f3b10f4110b8ce2a4f131713a516d22f900e34ctargetblank0f3b10fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree53ac1ae089a2a15eb9d40d4073509aaf327d2ec7targetblank53ac1aea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/0f3b10f4110b8ce2a4f131713a516d22f900e34c" target="_blank">0f3b10f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/53ac1ae089a2a15eb9d40d4073509aaf327d2ec7" target="_blank">53ac1ae</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -509,10 +509,15 @@ Ignored files:
     Ignored:    code/.Rhistory
 
 Untracked files:
-    Untracked:  code/syn_1 - data_organize.R
+    Untracked:  analysis/w1.wordcloud.jpeg
+    Untracked:  analysis/w2.wordcloud.jpeg
+    Untracked:  output/data.word1.csv
+    Untracked:  output/w1.wordcloud.jpeg
+    Untracked:  output/w2.wordcloud.jpeg
 
 Unstaged changes:
     Modified:   analysis/synthesis_HKH.Rmd
+    Modified:   code/syn_1 - data_organize.R
 
 </code></pre>
 <p>
@@ -551,6 +556,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/53ac1ae089a2a15eb9d40d4073509aaf327d2ec7/analysis/synthesis_HKH.Rmd" target="_blank">53ac1ae</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+<td>
+first part submission - HKH
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaranSShakya/mom-ag_services/53ac1ae089a2a15eb9d40d4073509aaf327d2ec7/docs/synthesis_HKH.html" target="_blank">53ac1ae</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+<td>
+first part submission - HKH
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -596,9 +635,9 @@ Creating new synthesis page
 <h2>Part 1</h2>
 <p>I have attempted to answer the following questions:</p>
 <ul>
-<li><p><strong>1.</strong> Literature distribution by Year</p></li>
-<li><p><strong>2.</strong> Literature distribution by Country</p></li>
-<li><p><strong>3.</strong> Key word frequency</p></li>
+<li><p><strong>1.</strong> Literature distribution by Year.</p></li>
+<li><p><strong>2.</strong> Literature distribution by Country.</p></li>
+<li><p><strong>3.</strong> Key word frequency.</p></li>
 </ul>
 <div id="literature-distribution-by-year" class="section level4">
 <h4>Literature distribution by Year</h4>
@@ -1457,7 +1496,795 @@ Creating new synthesis page
 </div>
 <div id="key-word-frequency" class="section level4">
 <h4>Key Word Frequency</h4>
-<p>Work in progression</p>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#filjlgtgfd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#filjlgtgfd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#filjlgtgfd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#filjlgtgfd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#filjlgtgfd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#filjlgtgfd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#filjlgtgfd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#filjlgtgfd .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#filjlgtgfd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#filjlgtgfd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#filjlgtgfd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#filjlgtgfd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#filjlgtgfd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#filjlgtgfd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#filjlgtgfd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#filjlgtgfd .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#filjlgtgfd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#filjlgtgfd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#filjlgtgfd .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#filjlgtgfd .gt_left {
+  text-align: left;
+}
+
+#filjlgtgfd .gt_center {
+  text-align: center;
+}
+
+#filjlgtgfd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#filjlgtgfd .gt_font_normal {
+  font-weight: normal;
+}
+
+#filjlgtgfd .gt_font_bold {
+  font-weight: bold;
+}
+
+#filjlgtgfd .gt_font_italic {
+  font-style: italic;
+}
+
+#filjlgtgfd .gt_super {
+  font-size: 65%;
+}
+
+#filjlgtgfd .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="filjlgtgfd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Author Keywords</th>
+    </tr>
+    <tr>
+      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">word</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">freq</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">agriculture</td>
+      <td class="gt_row gt_right">135</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">food</td>
+      <td class="gt_row gt_right">96</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">diversity</td>
+      <td class="gt_row gt_right">91</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">conservation</td>
+      <td class="gt_row gt_right">87</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">land</td>
+      <td class="gt_row gt_right">83</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">agricultural</td>
+      <td class="gt_row gt_right">82</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">crop</td>
+      <td class="gt_row gt_right">73</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">system</td>
+      <td class="gt_row gt_right">68</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">china</td>
+      <td class="gt_row gt_right">67</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">sustainable</td>
+      <td class="gt_row gt_right">63</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+<p><img src="w1.wordcloud.jpeg" /></p>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#xokkucukci .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xokkucukci .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xokkucukci .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xokkucukci .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xokkucukci .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xokkucukci .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xokkucukci .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xokkucukci .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xokkucukci .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xokkucukci .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xokkucukci .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xokkucukci .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xokkucukci .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xokkucukci .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xokkucukci .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xokkucukci .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xokkucukci .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xokkucukci .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#xokkucukci .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xokkucukci .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#xokkucukci .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xokkucukci .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xokkucukci .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xokkucukci .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xokkucukci .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#xokkucukci .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xokkucukci .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#xokkucukci .gt_left {
+  text-align: left;
+}
+
+#xokkucukci .gt_center {
+  text-align: center;
+}
+
+#xokkucukci .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xokkucukci .gt_font_normal {
+  font-weight: normal;
+}
+
+#xokkucukci .gt_font_bold {
+  font-weight: bold;
+}
+
+#xokkucukci .gt_font_italic {
+  font-style: italic;
+}
+
+#xokkucukci .gt_super {
+  font-size: 65%;
+}
+
+#xokkucukci .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="xokkucukci" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Index Keywords</th>
+    </tr>
+    <tr>
+      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">word</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">freq</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">agricultural</td>
+      <td class="gt_row gt_right">377</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">soil</td>
+      <td class="gt_row gt_right">205</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">agriculture</td>
+      <td class="gt_row gt_right">199</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">crop</td>
+      <td class="gt_row gt_right">187</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">china</td>
+      <td class="gt_row gt_right">179</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">land</td>
+      <td class="gt_row gt_right">164</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">analysis</td>
+      <td class="gt_row gt_right">155</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">food</td>
+      <td class="gt_row gt_right">149</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">development</td>
+      <td class="gt_row gt_right">137</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">plant</td>
+      <td class="gt_row gt_right">131</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1481,26 +2308,28 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] gt_0.2.1        readxl_1.3.1    forcats_0.5.0   stringr_1.4.0  
- [5] dplyr_0.8.5     purrr_0.3.4     readr_1.3.1     tidyr_1.0.3    
- [9] tibble_3.0.1    ggplot2_3.3.0   tidyverse_1.3.0 workflowr_1.6.2
+ [1] gt_0.2.1           SnowballC_0.7.0    wordcloud_2.6      RColorBrewer_1.1-2
+ [5] tm_0.7-7           NLP_0.2-0          readxl_1.3.1       forcats_0.5.0     
+ [9] stringr_1.4.0      dplyr_0.8.5        purrr_0.3.4        readr_1.3.1       
+[13] tidyr_1.0.3        tibble_3.0.1       ggplot2_3.3.0      tidyverse_1.3.0   
+[17] workflowr_1.6.2   
 
 loaded via a namespace (and not attached):
- [1] tidyselect_1.1.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
- [5] colorspace_1.4-1 vctrs_0.3.0      generics_0.0.2   htmltools_0.4.0 
- [9] yaml_2.2.1       rlang_0.4.6      later_1.0.0      pillar_1.4.4    
-[13] withr_2.2.0      glue_1.4.1       DBI_1.1.0        dbplyr_1.4.3    
-[17] modelr_0.1.7     lifecycle_0.2.0  munsell_0.5.0    gtable_0.3.0    
-[21] cellranger_1.1.0 rvest_0.3.5      evaluate_0.14    knitr_1.28      
-[25] httpuv_1.5.2     fansi_0.4.1      broom_0.5.6      Rcpp_1.0.4.6    
-[29] checkmate_2.0.0  promises_1.1.0   backports_1.1.6  scales_1.1.1    
-[33] jsonlite_1.6.1   fs_1.4.1         hms_0.5.3        digest_0.6.25   
-[37] stringi_1.4.6    grid_4.0.0       rprojroot_1.3-2  cli_2.0.2       
-[41] tools_4.0.0      sass_0.2.0       magrittr_1.5     crayon_1.3.4    
-[45] whisker_0.4      pkgconfig_2.0.3  ellipsis_0.3.0   xml2_1.3.2      
-[49] reprex_0.3.0     lubridate_1.7.8  rstudioapi_0.11  assertthat_0.2.1
-[53] rmarkdown_2.1    httr_1.4.1       R6_2.4.1         nlme_3.1-147    
-[57] git2r_0.27.1     compiler_4.0.0  </code></pre>
+ [1] Rcpp_1.0.4.6     lubridate_1.7.8  lattice_0.20-41  assertthat_0.2.1
+ [5] rprojroot_1.3-2  digest_0.6.25    slam_0.1-47      R6_2.4.1        
+ [9] cellranger_1.1.0 backports_1.1.6  reprex_0.3.0     evaluate_0.14   
+[13] httr_1.4.1       pillar_1.4.4     rlang_0.4.6      rstudioapi_0.11 
+[17] whisker_0.4      checkmate_2.0.0  rmarkdown_2.1    munsell_0.5.0   
+[21] broom_0.5.6      compiler_4.0.0   httpuv_1.5.2     modelr_0.1.7    
+[25] xfun_0.13        pkgconfig_2.0.3  htmltools_0.4.0  tidyselect_1.1.0
+[29] fansi_0.4.1      crayon_1.3.4     dbplyr_1.4.3     withr_2.2.0     
+[33] later_1.0.0      grid_4.0.0       nlme_3.1-147     jsonlite_1.6.1  
+[37] gtable_0.3.0     lifecycle_0.2.0  DBI_1.1.0        git2r_0.27.1    
+[41] magrittr_1.5     scales_1.1.1     cli_2.0.2        stringi_1.4.6   
+[45] fs_1.4.1         promises_1.1.0   xml2_1.3.2       ellipsis_0.3.0  
+[49] generics_0.0.2   vctrs_0.3.0      tools_4.0.0      glue_1.4.1      
+[53] hms_0.5.3        parallel_4.0.0   yaml_2.2.1       colorspace_1.4-1
+[57] rvest_0.3.5      knitr_1.28       haven_2.2.0      sass_0.2.0      </code></pre>
 </div>
 </div>
 </div>
