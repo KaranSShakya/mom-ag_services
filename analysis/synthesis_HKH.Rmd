@@ -13,46 +13,51 @@ source("code/syn_1 - data_organize.r")
 library(gt)
 ```
 
-## Part 1
-I have attempted to answer the following questions:
+## Summary Statistics 
 
-* **1.** Literature distribution by Year.
+**1. Summary Statistics by Year**
 
-* **2.** Literature distribution by Country.
+![](pictures/hkh-summary_year.jpg)
 
-* **3.** Key word frequency.
+* This table shows how many papers were from the respective years.
 
-#### Literature distribution by Year
-```{r eval=T, echo=F}
-names(data.year)[2] <- "Count"
-data.year %>% 
-  gt()
-```
+* It is important to note that a lot of papers are from **2015**.
 
-#### Literature distribution by Country
+
+**2. Summary Statistics by Country**
 ```{r eval=T, echo=F}
 data.country %>% 
   gt()
 ```
 
-#### Key Word Frequency
-```{r eval=T, echo=F}
-w1.table %>% 
-  select(1,2) %>% 
-  gt() %>% 
-  tab_header(title="Author Keywords")
-```
+* Almost one-third of the data are literature from the country: **India** and **China**. This might create a slight bias in the type of key words being used.
 
-![](w1.wordcloud.jpeg)
+***
 
+## Word Cloud
+Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram. The following picture is a word cloud from both the Author's Key Word and Index Key Word.
 
-```{r eval=T, echo=F}
-w2.table %>%
-  select(1,2) %>% 
-  gt() %>% 
-  tab_header(title="Index Keywords")
-````
+It is important to note, that for this word cloud key words with a space will be divided into two. In other words, "agricultural development" will be read as two different key word "agriculture" and "development".
 
-![](w2.wordcloud.jpeg)
+This is a good visual representation to use in informal setting like presentations, but not for academic writing.
+
+![](pictures/hkh-worldcloud.png)
+
+***
+
+## Key Word Frequency - Table
+Let's say you want to answer the question **How has the literature framework/priorities changed in the last five years?**
+
+These two tables can help highlight the change.
+
+![](pictures/hkh-keywords_table.png)
+
+There is a lot to unpack from these two tables.
+
+* The **bold** number below is the total number of keywords. Both author and index had more total keywords between 2015-2020 than in papers from 1996-2014. This why I chose to compare the last 5 years.
+
+* In Author, but more clearly in Index, you can see an increase in *climate change*, *food security*, *sustainable development*, *agribusiness*, which does signal an increase in a more holistic approach to conducting research in the HKH (moving from a biological focus to a more socio-economic focus). It is always important to note that these tables do not prove that there is shift in focus, but simply highlights the trends in literature.
+
+***
 
 

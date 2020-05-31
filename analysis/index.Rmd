@@ -8,9 +8,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Hello! This is a GitHub website I built for your datasets. 
+Hello! This is a GitHub website I built for your datasets. Click on the links to navigate pages or results.  
 
 [1. Agriculture Ecosystem Services - Survey](ag_services.html)
 
-[2. Systhesis Analysis - HKH](synthesis_HKH.html)
+[2. Synthesis Analysis - HKH](synthesis_HKH.html)
 

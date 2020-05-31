@@ -379,7 +379,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -388,7 +388,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -397,10 +397,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-05-30
+<strong>Last updated:</strong> 2020-05-31
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>mom-ag_services/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -416,12 +416,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree5cf0632dd35cbfaea451c87ae8fc0ec55156b5adtargetblank5cf0632a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/5cf0632dd35cbfaea451c87ae8fc0ec55156b5ad" target="_blank">5cf0632</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree37e800227045d3297f1d7946e38ed275dcb17ed2targetblank37e8002a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/37e800227045d3297f1d7946e38ed275dcb17ed2" target="_blank">37e8002</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree5cf0632dd35cbfaea451c87ae8fc0ec55156b5adtargetblank5cf0632a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree37e800227045d3297f1d7946e38ed275dcb17ed2targetblank37e8002a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/5cf0632dd35cbfaea451c87ae8fc0ec55156b5ad" target="_blank">5cf0632</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/37e800227045d3297f1d7946e38ed275dcb17ed2" target="_blank">37e8002</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -510,8 +510,19 @@ Ignored files:
     Ignored:    analysis/.Rhistory
     Ignored:    code/.Rhistory
 
+Untracked files:
+    Untracked:  code/syn_2-key_words.R
+    Untracked:  output/author-15_20.csv
+    Untracked:  output/author-96_14.csv
+    Untracked:  output/data_year.csv
+    Untracked:  output/excel-organize.xlsx
+    Untracked:  output/index-15_20.csv
+    Untracked:  output/index-96_14.csv
+    Untracked:  output/word-organize.docx
+    Untracked:  output/~$excel-organize.xlsx
+
 Unstaged changes:
-    Modified:   analysis/_site.yml
+    Modified:   analysis/synthesis_HKH.Rmd
 
 </code></pre>
 <p>
@@ -550,6 +561,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaranSShakya/mom-ag_services/37e800227045d3297f1d7946e38ed275dcb17ed2/docs/synthesis_HKH.html" target="_blank">37e8002</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+<td>
+part 1 complete
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -693,17 +721,15 @@ Creating new synthesis page
 </div>
 </div>
 </div>
-<div id="part-1" class="section level2">
-<h2>Part 1</h2>
-<p>I have attempted to answer the following questions:</p>
+<div id="summary-statistics" class="section level2">
+<h2>Summary Statistics</h2>
+<p><strong>1. Summary Statistics by Year</strong></p>
+<p><img src="pictures/hkh-summary_year.jpg" /></p>
 <ul>
-<li><p><strong>1.</strong> Literature distribution by Year.</p></li>
-<li><p><strong>2.</strong> Literature distribution by Country.</p></li>
-<li><p><strong>3.</strong> Key word frequency.</p></li>
+<li><p>This table shows how many papers were from the respective years.</p></li>
+<li><p>It is important to note that a lot of papers are from <strong>2015</strong>.</p></li>
 </ul>
-<div id="literature-distribution-by-year" class="section level4">
-<h4>Literature distribution by Year</h4>
-<style>html {
+<p><strong>2. Summary Statistics by Country</strong> <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
@@ -1041,460 +1067,6 @@ Creating new synthesis page
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Year</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Count</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_right">1995</td>
-      <td class="gt_row gt_center">2</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1996</td>
-      <td class="gt_row gt_center">2</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1997</td>
-      <td class="gt_row gt_center">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1998</td>
-      <td class="gt_row gt_center">1</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">1999</td>
-      <td class="gt_row gt_center">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2000</td>
-      <td class="gt_row gt_center">7</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2001</td>
-      <td class="gt_row gt_center">11</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2002</td>
-      <td class="gt_row gt_center">6</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2003</td>
-      <td class="gt_row gt_center">9</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2004</td>
-      <td class="gt_row gt_center">13</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2005</td>
-      <td class="gt_row gt_center">18</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2006</td>
-      <td class="gt_row gt_center">20</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2007</td>
-      <td class="gt_row gt_center">22</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2008</td>
-      <td class="gt_row gt_center">19</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2009</td>
-      <td class="gt_row gt_center">30</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2010</td>
-      <td class="gt_row gt_center">19</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2011</td>
-      <td class="gt_row gt_center">23</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2012</td>
-      <td class="gt_row gt_center">36</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2013</td>
-      <td class="gt_row gt_center">39</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2014</td>
-      <td class="gt_row gt_center">53</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2015</td>
-      <td class="gt_row gt_center">77</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2016</td>
-      <td class="gt_row gt_center">73</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2017</td>
-      <td class="gt_row gt_center">85</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2018</td>
-      <td class="gt_row gt_center">118</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2019</td>
-      <td class="gt_row gt_center">156</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right">2020</td>
-      <td class="gt_row gt_center">60</td>
-    </tr>
-  </tbody>
-  
-  
-</table></div>
-</div>
-<div id="literature-distribution-by-country" class="section level4">
-<h4>Literature distribution by Country</h4>
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#xzsslutarg .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#xzsslutarg .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#xzsslutarg .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#xzsslutarg .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#xzsslutarg .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#xzsslutarg .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#xzsslutarg .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#xzsslutarg .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#xzsslutarg .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#xzsslutarg .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#xzsslutarg .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#xzsslutarg .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#xzsslutarg .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#xzsslutarg .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#xzsslutarg .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xzsslutarg .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xzsslutarg .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#xzsslutarg .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xzsslutarg .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#xzsslutarg .gt_left {
-  text-align: left;
-}
-
-#xzsslutarg .gt_center {
-  text-align: center;
-}
-
-#xzsslutarg .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#xzsslutarg .gt_font_normal {
-  font-weight: normal;
-}
-
-#xzsslutarg .gt_font_bold {
-  font-weight: bold;
-}
-
-#xzsslutarg .gt_font_italic {
-  font-style: italic;
-}
-
-#xzsslutarg .gt_super {
-  font-size: 65%;
-}
-
-#xzsslutarg .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="xzsslutarg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Country</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Count</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">% of Total</th>
@@ -1554,800 +1126,31 @@ Creating new synthesis page
   </tbody>
   
   
-</table></div>
+</table></div></p>
+<ul>
+<li>Almost one-third of the data are literature from the country: <strong>India</strong> and <strong>China</strong>. This might create a slight bias in the type of key words being used.</li>
+</ul>
+<hr />
 </div>
-<div id="key-word-frequency" class="section level4">
-<h4>Key Word Frequency</h4>
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#filjlgtgfd .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#filjlgtgfd .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#filjlgtgfd .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#filjlgtgfd .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#filjlgtgfd .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#filjlgtgfd .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#filjlgtgfd .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#filjlgtgfd .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#filjlgtgfd .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#filjlgtgfd .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#filjlgtgfd .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#filjlgtgfd .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#filjlgtgfd .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#filjlgtgfd .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#filjlgtgfd .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#filjlgtgfd .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#filjlgtgfd .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#filjlgtgfd .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#filjlgtgfd .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#filjlgtgfd .gt_left {
-  text-align: left;
-}
-
-#filjlgtgfd .gt_center {
-  text-align: center;
-}
-
-#filjlgtgfd .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#filjlgtgfd .gt_font_normal {
-  font-weight: normal;
-}
-
-#filjlgtgfd .gt_font_bold {
-  font-weight: bold;
-}
-
-#filjlgtgfd .gt_font_italic {
-  font-style: italic;
-}
-
-#filjlgtgfd .gt_super {
-  font-size: 65%;
-}
-
-#filjlgtgfd .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="filjlgtgfd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  <thead class="gt_header">
-    <tr>
-      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Author Keywords</th>
-    </tr>
-    <tr>
-      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
-    </tr>
-  </thead>
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">word</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">freq</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">agriculture</td>
-      <td class="gt_row gt_right">135</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">food</td>
-      <td class="gt_row gt_right">96</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">diversity</td>
-      <td class="gt_row gt_right">91</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">conservation</td>
-      <td class="gt_row gt_right">87</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">land</td>
-      <td class="gt_row gt_right">83</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">agricultural</td>
-      <td class="gt_row gt_right">82</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">crop</td>
-      <td class="gt_row gt_right">73</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">system</td>
-      <td class="gt_row gt_right">68</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">china</td>
-      <td class="gt_row gt_right">67</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">sustainable</td>
-      <td class="gt_row gt_right">63</td>
-    </tr>
-  </tbody>
-  
-  
-</table></div>
-<p><img src="w1.wordcloud.jpeg" /></p>
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#xokkucukci .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#xokkucukci .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xokkucukci .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#xokkucukci .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#xokkucukci .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xokkucukci .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xokkucukci .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#xokkucukci .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#xokkucukci .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#xokkucukci .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#xokkucukci .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#xokkucukci .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#xokkucukci .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#xokkucukci .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#xokkucukci .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#xokkucukci .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#xokkucukci .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#xokkucukci .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#xokkucukci .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xokkucukci .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#xokkucukci .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xokkucukci .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#xokkucukci .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xokkucukci .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xokkucukci .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#xokkucukci .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xokkucukci .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#xokkucukci .gt_left {
-  text-align: left;
-}
-
-#xokkucukci .gt_center {
-  text-align: center;
-}
-
-#xokkucukci .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#xokkucukci .gt_font_normal {
-  font-weight: normal;
-}
-
-#xokkucukci .gt_font_bold {
-  font-weight: bold;
-}
-
-#xokkucukci .gt_font_italic {
-  font-style: italic;
-}
-
-#xokkucukci .gt_super {
-  font-size: 65%;
-}
-
-#xokkucukci .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="xokkucukci" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  <thead class="gt_header">
-    <tr>
-      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Index Keywords</th>
-    </tr>
-    <tr>
-      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style></th>
-    </tr>
-  </thead>
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">word</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">freq</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">agricultural</td>
-      <td class="gt_row gt_right">377</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">soil</td>
-      <td class="gt_row gt_right">205</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">agriculture</td>
-      <td class="gt_row gt_right">199</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">crop</td>
-      <td class="gt_row gt_right">187</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">china</td>
-      <td class="gt_row gt_right">179</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">land</td>
-      <td class="gt_row gt_right">164</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">analysis</td>
-      <td class="gt_row gt_right">155</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">food</td>
-      <td class="gt_row gt_right">149</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">development</td>
-      <td class="gt_row gt_right">137</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">plant</td>
-      <td class="gt_row gt_right">131</td>
-    </tr>
-  </tbody>
-  
-  
-</table></div>
-<p><img src="w2.wordcloud.jpeg" /></p>
+<div id="word-cloud" class="section level2">
+<h2>Word Cloud</h2>
+<p>Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram. The following picture is a word cloud from both the Author’s Key Word and Index Key Word.</p>
+<p>It is important to note, that for this word cloud key words with a space will be divided into two. In other words, “agricultural development” will be read as two different key word “agriculture” and “development”.</p>
+<p>This is a good visual representation to use in informal setting like presentations, but not for academic writing.</p>
+<p><img src="pictures/hkh-worldcloud.png" /></p>
+<hr />
+</div>
+<div id="key-word-frequency---table" class="section level2">
+<h2>Key Word Frequency - Table</h2>
+<p>Let’s say you want to answer the question <strong>How has the literature framework/priorities changed in the last five years?</strong></p>
+<p>These two tables can help highlight the change.</p>
+<p><img src="pictures/hkh-keywords_table.png" /></p>
+<p>There is a lot to unpack from these two tables.</p>
+<ul>
+<li><p>The <strong>bold</strong> number below is the total number of keywords. Both author and index had more total keywords between 2015-2020 than in papers from 1996-2014. This why I chose to compare the last 5 years.</p></li>
+<li><p>In Author, but more clearly in Index, you can see an increase in <em>climate change</em>, <em>food security</em>, <em>sustainable development</em>, <em>agribusiness</em>, which does signal an increase in a more holistic approach to conducting research in the HKH (moving from a biological focus to a more socio-economic focus). It is always important to note that these tables do not prove that there is shift in focus, but simply highlights the trends in literature.</p></li>
+</ul>
+<hr />
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -2393,7 +1196,6 @@ loaded via a namespace (and not attached):
 [49] generics_0.0.2   vctrs_0.3.0      tools_4.0.0      glue_1.4.1      
 [53] hms_0.5.3        parallel_4.0.0   yaml_2.2.1       colorspace_1.4-1
 [57] rvest_0.3.5      knitr_1.28       haven_2.2.0      sass_0.2.0      </code></pre>
-</div>
 </div>
 </div>
 
