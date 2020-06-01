@@ -60,4 +60,14 @@ There is a lot to unpack from these two tables.
 
 ***
 
+## Key Word - Top 50 (Author + Index)
+The table below is the top 50 keywords from both author and index. Notice, I have included geographic keywords such as **china**, **himalayas**, **india** etc. In the previous table, I removed these geographic keywords because I did not think it would help with the story. The geographic keywords are often the most repeated, but does not really tell us a lot about the direction of the paper.
+
+This is all the keywords in total. So if China has 53, this means that in all the paper you collected from *1998 to 2020*, China has been the keyword 53 times.
+
+![](pictures/hkh-all_table.jpg)
+
+***
+
+
 

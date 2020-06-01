@@ -25,7 +25,7 @@ data.a2$Auth_keywords <- gsub(" ", "", data.a2$Auth_keywords) #removing space
 data.a2 <- as.data.frame(lapply(data.a2, tolower)) #all lower case
 data.a2$Year <- as.numeric(as.character(data.a2$Year))
 
-#1996 - 2014 -------
+#1996 - 2014 
 data.a2.96_14 <- data.a2 %>% 
   filter(Year >= 1996 & Year <= 2015) %>% 
   select(2) #1807 key words
@@ -39,7 +39,7 @@ a2.96_14.d <- data.frame(word = names(a2.96_14.v),freq=a2.96_14.v)
 
 remove(data.a2.96_14, a2.96_14, a2.96_14.matrix, a2.96_14.matrix1, a2.96_14.v)
 
-#2015 - 2020 -------
+#2015 - 2020 
 data.a2.15_20 <- data.a2 %>% 
   filter(Year >= 2015 & Year <= 2020) %>% 
   select(2) #2764 key words
@@ -55,6 +55,20 @@ remove(data.a2.15_20, a2.15_20, a2.15_20.matrix, a2.15_20.matrix1, a2.15_20.v)
 
 # write.csv(a2.96_14.d, file="output/author-96_14.csv")
 # write.csv(a2.15_20.d, file="output/author-15_20.csv")
+
+#Total
+data.a.t <- data.a2 %>% 
+  select(2) #4179 key words
+
+a.t <- Corpus(VectorSource(data.a.t))
+
+a.t.matrix <- TermDocumentMatrix(a.t)
+a.t.matrix1 <- as.matrix(a.t.matrix)
+a.t.v <- sort(rowSums(a.t.matrix1),decreasing=TRUE)
+a.t.d <- data.frame(word = names(a.t.v),freq=a.t.v)
+
+remove(data.a.t, a.t, a.t.matrix, a.t.matrix1, a.t.v)
+
 
 #Index Keyword ----------
 data.i <- data0 %>% 
@@ -73,7 +87,7 @@ data.i2$Index_keywords <- gsub(" ", "", data.i2$Index_keywords) #removing space
 data.i2 <- as.data.frame(lapply(data.i2, tolower)) #all lower case
 data.i2$Year <- as.numeric(as.character(data.i2$Year))
 
-#1996 - 2014 -------
+#1996 - 2014 
 data.i2.96_14 <- data.i2 %>% 
   filter(Year >= 1996 & Year <= 2015) %>% 
   select(2) #4287 key words
@@ -87,7 +101,7 @@ i2.96_14.d <- data.frame(word = names(i2.96_14.v),freq=i2.96_14.v)
 
 remove(data.i2.96_14, i2.96_14, i2.96_14.matrix, i2.96_14.matrix1, i2.96_14.v)
 
-#2015 - 2020 -------
+#2015 - 2020 
 data.i2.15_20 <- data.i2 %>% 
   filter(Year >= 2015 & Year <= 2020) %>% 
   select(2) #5497 key words
@@ -103,3 +117,17 @@ remove(data.i2.15_20, i2.15_20, i2.15_20.matrix, i2.15_20.matrix1, i2.15_20.v)
 
 # write.csv(i2.96_14.d, file="output/index-96_14.csv")
 # write.csv(i2.15_20.d, file="output/index-15_20.csv")
+
+#Total
+data.i.t <- data.i2 %>% 
+  select(2) #9106 key words
+
+i.t <- Corpus(VectorSource(data.i.t))
+
+i.t.matrix <- TermDocumentMatrix(i.t)
+i.t.matrix1 <- as.matrix(i.t.matrix)
+i.t.v <- sort(rowSums(i.t.matrix1),decreasing=TRUE)
+i.t.d <- data.frame(word = names(i.t.v),freq=i.t.v)
+
+remove(data.i.t, i.t, i.t.matrix, i.t.matrix1, i.t.v)
+
