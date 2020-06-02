@@ -1,3 +1,14 @@
+---
+title: "Code Example"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+```{r eval=F, echo=T}
 library(tidyverse)
 library(dplyr)
 library(readxl)
@@ -97,4 +108,4 @@ a5.time.d <- data.frame(word = names(a5.time.v),freq=a5.time.v)
 remove(data5.time, a5.time, a5.time.matrix, a5.time.matrix1, a5.time.v)
 
 write.csv(a5.time.d, file="output/keyword-16_20.csv")  
-
+```

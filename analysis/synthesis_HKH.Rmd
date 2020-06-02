@@ -69,5 +69,20 @@ This is all the keywords in total. So if China has 53, this means that in all th
 
 ***
 
+## Combining Author and Index Keywords
+**Please read:** I think it is important to understand how I combined the keywords from *Author* and *Index*. This was a really long process and this is important to help understand how the results were made.
+
+Lets take the example of any one paper. The **author keywords** for this paper was "agriculture", "pesticides", and "agribusiness". The **index keywords** for the same paper was "mountain", "agriculture", "pesticides".
+
+As suggested, I combined both these keywords which became "agriculture", "pesticides", "agribusiness", "mountain", "agriculture", "pesticides". Now, a problem with this is that there are repreated keywords. 
+
+So, I then identified repeated keywords and deleted them. So our final keywords for thet paper was "agriculture", "pesticides", "agribusiness", "mountain". Repeated keywords will bias the results as the same keywords will count as two even though it was from the same one paper.
+
+If you do not understand this, please let me know. This is an important part in combining keywords.
+
+I realized that I have yet to show you **R** so here is a sample of the codes I used to do these functions: [Code Link](code_example.html).  
+
+
+
 
 
