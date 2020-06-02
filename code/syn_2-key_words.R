@@ -13,7 +13,6 @@ data.a <- data0 %>%
   select(4, 18)
 
 sum(is.na(data.a$Auth_keywords)) #123 rows are NA
-
 data.a  <- data.a %>%  
   na.omit()
 
@@ -25,36 +24,21 @@ data.a2$Auth_keywords <- gsub(" ", "", data.a2$Auth_keywords) #removing space
 data.a2 <- as.data.frame(lapply(data.a2, tolower)) #all lower case
 data.a2$Year <- as.numeric(as.character(data.a2$Year))
 
-#1996 - 2014 
-data.a2.96_14 <- data.a2 %>% 
-  filter(Year >= 1996 & Year <= 2015) %>% 
-  select(2) #1807 key words
+#Time Filer
+data.a2.time <- data.a2 %>% 
+  filter(Year >= 2016 & Year <= 2020) %>% 
+  select(2) 
 
-a2.96_14 <- Corpus(VectorSource(data.a2.96_14))
+a2.time <- Corpus(VectorSource(data.a2.time))
 
-a2.96_14.matrix <- TermDocumentMatrix(a2.96_14)
-a2.96_14.matrix1 <- as.matrix(a2.96_14.matrix)
-a2.96_14.v <- sort(rowSums(a2.96_14.matrix1),decreasing=TRUE)
-a2.96_14.d <- data.frame(word = names(a2.96_14.v),freq=a2.96_14.v)
+a2.time.matrix <- TermDocumentMatrix(a2.time)
+a2.time.matrix1 <- as.matrix(a2.time.matrix)
+a2.time.v <- sort(rowSums(a2.time.matrix1),decreasing=TRUE)
+a2.time.d <- data.frame(word = names(a2.time.v),freq=a2.time.v)
 
-remove(data.a2.96_14, a2.96_14, a2.96_14.matrix, a2.96_14.matrix1, a2.96_14.v)
+remove(data.a2.time, a2.time, a2.time.matrix, a2.time.matrix1, a2.time.v)
 
-#2015 - 2020 
-data.a2.15_20 <- data.a2 %>% 
-  filter(Year >= 2015 & Year <= 2020) %>% 
-  select(2) #2764 key words
-
-a2.15_20 <- Corpus(VectorSource(data.a2.15_20))
-
-a2.15_20.matrix <- TermDocumentMatrix(a2.15_20)
-a2.15_20.matrix1 <- as.matrix(a2.15_20.matrix)
-a2.15_20.v <- sort(rowSums(a2.15_20.matrix1),decreasing=TRUE)
-a2.15_20.d <- data.frame(word = names(a2.15_20.v),freq=a2.15_20.v)
-
-remove(data.a2.15_20, a2.15_20, a2.15_20.matrix, a2.15_20.matrix1, a2.15_20.v)
-
-# write.csv(a2.96_14.d, file="output/author-96_14.csv")
-# write.csv(a2.15_20.d, file="output/author-15_20.csv")
+write.csv(a2.time.d, file="output/a-16_20.csv")
 
 #Total
 data.a.t <- data.a2 %>% 

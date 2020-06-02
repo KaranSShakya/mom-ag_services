@@ -1,0 +1,6 @@
+library(tidyverse)
+library(readxl)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+library(SnowballC)

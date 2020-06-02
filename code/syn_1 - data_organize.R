@@ -14,7 +14,9 @@ data0 <- read_excel("data/synthesis_HKH-copy.xlsx") %>%
 data.year <- data0 %>% 
   select(4) %>%
   group_by(Year) %>% 
-  tally()
+  tally() %>% 
+  ungroup() %>% 
+  mutate(cum_sum = cumsum(n))
 
 #By country ------
 unique(data0$Geog_unit)
