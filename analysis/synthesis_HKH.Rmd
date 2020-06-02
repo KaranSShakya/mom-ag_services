@@ -82,7 +82,9 @@ If you do not understand this, please let me know. This is an important part in 
 
 I realized that I have yet to show you **R** so here is a sample of the codes I used to do these functions: [Code Link](code_example.html).  
 
+![](pictures/hkh-keywords_5yrs.png)
 
+* This is the 5 years interval picture for both keywords. I will send you the full excel file of these keywords soon, so you can select and reconsider some variables you want to remove or keep.
 
-
+* Suggestion is to remove keywords such as "agriculture" as these are all encompassing. But I would leave it to you to select the keywords you find effective. 
 
