@@ -88,3 +88,30 @@ I realized that I have yet to show you **R** so here is a sample of the codes I 
 
 * Suggestion is to remove keywords such as "agriculture" as these are all encompassing. But I would leave it to you to select the keywords you find effective. 
 
+***
+
+## Trends over Time - Groupped Keywords
+```{r eval=T, echo=F, warning=F, message=F}
+source("code/syn_4-linegraph.R")
+```
+This is the crude results for the keywords that you groupped.
+```{r eval=T, echo=F}
+raw
+```
+This is an **area chart**. Which shows how each attribute contributes to the total over time.
+```{r eval=T, echo=F}
+geom_area
+```
+
+Recommendations:
+
+* I would remove 1995 and 2020. 2020 is not complete, and showing the figures for 2020 does not help.
+
+* The sudden increase in 2015 is simply due to the fact that there are soo many more papers in 2015.
+
+* I would also revise on the keywords. Or maybe generalize the entire groupping into 4 categories. 
+
+* Let me know if there are any edits to this graph you would like to see. Visually or graphically. 
+
+
+
