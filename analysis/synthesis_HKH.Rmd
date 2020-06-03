@@ -109,7 +109,7 @@ Recommendations:
 
 * The sudden increase in 2015 is simply due to the fact that there are soo many more papers in 2015.
 
-* I would also revise on the keywords. Or maybe generalize the entire groupping into 4 categories. 
+* I would also revise on the keywords. The 5 categories make sense, but the keywords you have selected for each category can be improved upon. For example, keywords like "crop production" is really generic, and can be a keyword in a paper that is entirely about climate change. To see a better trend, and a better graph, I woudl revise the keywords so that each keyword is specific to its category. Another example is "sustainability". This is another generic keyword that can be applicable to not only engagement. The keywords for drivers are good. 
 
 * Let me know if there are any edits to this graph you would like to see. Visually or graphically. 
 
