@@ -88,4 +88,19 @@ inst_collaboration <- ggplot(inst.final, aes(x=Year, y=count, fill=Collaboration
   scale_fill_discrete(labels=c("Sole HKH Country", "Two or more HKH Countries",
                                "HKH and International Countries", 
                                "Only International Countrues"))
- 
+
+data.c <- data3 %>% 
+  separate_rows(aff, sep=",") %>% 
+  group_by(aff) %>% 
+  tally()
+
+
+  
+
+
+
+
+
+
+
+

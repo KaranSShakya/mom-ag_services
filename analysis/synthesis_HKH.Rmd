@@ -139,5 +139,8 @@ inst_collaboration
 
 * HKH with HKH had the lowest collaboration in all our time intervals. 
 
+Here is the table that summarizes the country that each country came from:
+
+![](pictures/hkh-country_list.jpg)
 
 
