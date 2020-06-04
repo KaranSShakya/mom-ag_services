@@ -113,5 +113,31 @@ Recommendations:
 
 * Let me know if there are any edits to this graph you would like to see. Visually or graphically. 
 
+***
+
+## Institution Collaboration
+**Methodology:**
+
+* Example, in the **Affiliation** excel column author's information are given as follows: **Kaldhara, Kathmandu, Nepal ; 12 Road, Assam, India**
+
+* I seperated each values by **;** then I select the last string character which resulted in **Nepal, India**. This is how I made the graphs. 
+
+* The accuracy of this table is dependent on how well Scopus formats their data, and since I am only looking at countries, performing intra-country analysis is impossible. So to compensate for this omission I added two more variables: **Only HKH Country** to **Only international countries**.
+
+* So far, apart from 3 columns, I had a good result meaning SCOPUS organizes their data well.
+
+```{r eval=T, echo=F, message=F, warning=F}
+source("code/syn_5-institute.R")
+inst_collaboration
+```
+
+**What we can see:**
+
+* There is a lot more HKH-international collaboration than HKH-HKH collaboration.
+
+* Sole HKH countries produced the most papers in all our time intervals.
+
+* HKH with HKH had the lowest collaboration in all our time intervals. 
+
 
 
