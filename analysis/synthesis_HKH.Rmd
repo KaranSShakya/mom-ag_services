@@ -143,4 +143,17 @@ Here is the table that summarizes the country that each country came from:
 
 ![](pictures/hkh-country_list.jpg)
 
+***
+
+## Sankey Diagram (TEST)
+I have never built a Sankey Diagram so this will still be a work in progress. Here is where I am now:
+
+```{r eval=T, echo=F, warning=F, message=F}
+source("code/syn_6-sankey.R")
+sankey.test
+```
+
+***
+
+
 
