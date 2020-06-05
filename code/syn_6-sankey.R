@@ -6,7 +6,7 @@ library(alluvial)
 
 source("code/syn_7-sankey_table.r")
 
-ggplot(year_hkh, aes(axis1 = Year, axis2 = HKH_Country, y=Country_count))+
+sankey.test <- ggplot(year_hkh, aes(axis1 = Year, axis2 = HKH_Country, y=Country_count))+
   geom_alluvium()+
   geom_stratum()+
   geom_text(stat = "stratum", infer.label = TRUE)+
