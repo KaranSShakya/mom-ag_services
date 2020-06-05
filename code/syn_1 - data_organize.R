@@ -1,3 +1,4 @@
+#Library and Imports -------
 library(tidyverse)
 library(readxl)
 library(readr)
@@ -6,19 +7,18 @@ library(wordcloud)
 library(RColorBrewer)
 library(SnowballC)
 
-#Import excel
-data0 <- read_excel("data/synthesis_HKH-copy.xlsx") %>% 
-  select(-35:-39)
+
+data0 <- read_excel("data/synthesis_HKH-final.xlsx")
 
 #By year --------
 data.year <- data0 %>% 
   select(4) %>%
   group_by(Year) %>% 
   tally() %>% 
-  ungroup() %>% 
-  mutate(cum_sum = cumsum(n))
+  ungroup()
 
 #By country ------
+names(data0)[34] <- "Geog_unit"
 unique(data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH-NP", "Nepal", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH-CN", "China", data0$Geog_unit)
@@ -53,6 +53,7 @@ data.country$`% of Total` <- round(data.country$`% of Total`, 1)
 
 
 #Word Cloud -------
+names(data0)[18] <- "Auth_keywords"
 data.word1 <- data0 %>% 
   select(18) %>% 
   na.omit()

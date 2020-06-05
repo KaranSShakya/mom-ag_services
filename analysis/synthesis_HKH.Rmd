@@ -13,59 +13,17 @@ source("code/syn_1 - data_organize.r")
 library(gt)
 ```
 
+[Removed Analysis - Link](synthesis_HKH-omit.html)
+
 ## Summary Statistics 
 
 **1. Summary Statistics by Year**
 
-![](pictures/hkh-summary_year.jpg)
-
-* This table shows how many papers were from the respective years.
-
-* It is important to note that a lot of papers are from **2015**.
-
+![](pic/summary_year.png)
 
 **2. Summary Statistics by Country**
-```{r eval=T, echo=F}
-data.country %>% 
-  gt()
-```
 
-* Almost one-third of the data are literature from the country: **India** and **China**. This might create a slight bias in the type of key words being used.
-
-***
-
-## Word Cloud
-Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram. The following picture is a word cloud from both the Author's Key Word and Index Key Word.
-
-It is important to note, that for this word cloud key words with a space will be divided into two. In other words, "agricultural development" will be read as two different key word "agriculture" and "development".
-
-This is a good visual representation to use in informal setting like presentations, but not for academic writing.
-
-![](pictures/hkh-worldcloud.png)
-
-***
-
-## Key Word Frequency - Table
-Let's say you want to answer the question **How has the literature framework/priorities changed in the last five years?**
-
-These two tables can help highlight the change.
-
-![](pictures/hkh-keywords_table.png)
-
-There is a lot to unpack from these two tables.
-
-* The **bold** number below is the total number of keywords. Both author and index had more total keywords between 2015-2020 than in papers from 1996-2014. This why I chose to compare the last 5 years.
-
-* In Author, but more clearly in Index, you can see an increase in *climate change*, *food security*, *sustainable development*, *agribusiness*, which does signal an increase in a more holistic approach to conducting research in the HKH (moving from a biological focus to a more socio-economic focus). It is always important to note that these tables do not prove that there is shift in focus, but simply highlights the trends in literature.
-
-***
-
-## Key Word - Top 50 (Author + Index)
-The table below is the top 50 keywords from both author and index. Notice, I have included geographic keywords such as **china**, **himalayas**, **india** etc. In the previous table, I removed these geographic keywords because I did not think it would help with the story. The geographic keywords are often the most repeated, but does not really tell us a lot about the direction of the paper.
-
-This is all the keywords in total. So if China has 53, this means that in all the paper you collected from *1998 to 2020*, China has been the keyword 53 times.
-
-![](pictures/hkh-all_table.jpg)
+![](pic/summary_country.png)
 
 ***
 
@@ -82,7 +40,7 @@ If you do not understand this, please let me know. This is an important part in 
 
 I realized that I have yet to show you **R** so here is a sample of the codes I used to do these functions: [Code Link](code_example.html).  
 
-![](pictures/hkh-keywords_5yrs.png)
+![](pic/keywords_combined5.png)
 
 * This is the 5 years interval picture for both keywords. I will send you the full excel file of these keywords soon, so you can select and reconsider some variables you want to remove or keep.
 

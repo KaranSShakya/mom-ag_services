@@ -6,10 +6,13 @@ library(wordcloud)
 library(RColorBrewer)
 library(SnowballC)
 
-data0 <- read_excel("data/synthesis_HKH-copy.xlsx") %>% 
-  select(-35:-39)
+data0 <- read_excel("data/synthesis_HKH-final.xlsx")
 
 #Combining and Unique--------
+names(data0)[2] <- "Auth_id"
+names(data0)[18] <- "Auth_keywords"
+names(data0)[19] <- "Index_keywords"
+
 data1 <- data0 %>% 
   select(2, 4, 18, 19)
 data1 <- as.data.frame(lapply(data1, tolower)) #all lower case
@@ -18,7 +21,7 @@ data1$Index_keywords <- gsub(" ", "", data1$Index_keywords)
 data1$Auth_id <- gsub(";", "", data1$Auth_id)
 
 data2 <- data1 %>% 
-  mutate(Key=seq(1:905)) %>% 
+  mutate(Key=seq(1:838)) %>% 
   select(-1) %>% 
   select(4,1,2,3)
 
@@ -34,8 +37,8 @@ data2.i <- data2 %>%
 
 data2.merge <- merge(data2.a, data2.i, by=c("Key", "Year"), all=T)
 
-sum(is.na(data2.merge$Auth_keywords))
-sum(is.na(data2.merge$Index_keywords))
+sum(is.na(data2.merge$Auth_keywords)) #928 missing words
+sum(is.na(data2.merge$Index_keywords)) #1631 missing words
 
 data2.merge <- data2.merge %>% 
   mutate(identical = data2.merge$Auth_keywords==data2.merge$Index_keywords)
