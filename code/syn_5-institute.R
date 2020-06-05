@@ -24,48 +24,48 @@ data3 <- data2 %>%
 
 #write.csv(data3, file="output/hkh-institution_unedited.csv")
 
-inst0 <- read_csv("output/hkh-institution.csv")
+inst0 <- read_csv("output/hkh-institution_unedited.csv")
 
 inst.y <- inst0 %>% 
-  select(2,4) %>% 
-  group_by(Year, collaboration) %>% 
+  select(3, 5) %>% 
+  group_by(Year, col) %>% 
   tally() %>% 
   ungroup()
 
 inst.95_00 <- inst.y %>% 
   filter(Year >= 1995 & Year <= 2000) %>% 
   select(-1) %>% 
-  group_by(collaboration) %>% 
+  group_by(col) %>% 
   summarise(sum_95 = sum(n))
 
 inst.01_05 <- inst.y %>% 
   filter(Year >= 2001 & Year <= 2005) %>% 
   select(-1) %>% 
-  group_by(collaboration) %>% 
+  group_by(col) %>% 
   summarise(sum_01 = sum(n))
 
 inst.06_10 <- inst.y %>% 
   filter(Year >= 2006 & Year <= 2010) %>% 
   select(-1) %>% 
-  group_by(collaboration) %>% 
+  group_by(col) %>% 
   summarise(sum_06 = sum(n))
 
 inst.11_15 <- inst.y %>% 
   filter(Year >= 2011 & Year <= 2015) %>% 
   select(-1) %>% 
-  group_by(collaboration) %>% 
+  group_by(col) %>% 
   summarise(sum_11 = sum(n))
 
 inst.16_20 <- inst.y %>% 
   filter(Year >= 2016 & Year <= 2020) %>% 
   select(-1) %>% 
-  group_by(collaboration) %>% 
+  group_by(col) %>% 
   summarise(sum_16 = sum(n))
 
-inst.merge <- merge(inst.95_00, inst.01_05, by="collaboration")
-inst.merge <- merge(inst.merge, inst.06_10, by="collaboration")
-inst.merge <- merge(inst.merge, inst.11_15, by="collaboration")
-inst.merge <- merge(inst.merge, inst.16_20, by="collaboration")
+inst.merge <- merge(inst.95_00, inst.01_05, by="col")
+inst.merge <- merge(inst.merge, inst.06_10, by="col")
+inst.merge <- merge(inst.merge, inst.11_15, by="col")
+inst.merge <- merge(inst.merge, inst.16_20, by="col")
 
 names(inst.merge)[1] <- "Collaboration_type"
 names(inst.merge)[2] <- "1995-2000"

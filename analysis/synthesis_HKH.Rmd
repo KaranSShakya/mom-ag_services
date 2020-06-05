@@ -97,9 +97,11 @@ inst_collaboration
 
 * HKH with HKH had the lowest collaboration in all our time intervals. 
 
+* **Important** HKH and International Country can also mean there are multiple HKH countries involved with writing the paper. (Nepal + India + USA) would count as *HKH and International* rather than *Two or more HKH countries*.
+
 Here is the table that summarizes the country that each country came from:
 
-![](pictures/hkh-country_list.jpg)
+![](pic/institution_country.png)
 
 ***
 
