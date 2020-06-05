@@ -5,13 +5,11 @@ library(stringr)
 library(readxl)
 library(readr)
 
-data0 <- read_excel("data/synthesis_HKH-copy.xlsx") %>% 
-  select(-35:-39)
+data0 <- read_excel("data/synthesis_HKH-final.xlsx") %>% 
+  mutate(keyid = seq(1, 838))
 
 data1 <- data0 %>% 
-  select(1, 4, 15) %>% 
-  mutate(id = seq(1, 905)) %>% 
-  select(4,2,3) %>% 
+  select(42, 4, 15) %>% 
   na.omit() 
 
 data2 <- data1 %>% 
@@ -20,9 +18,11 @@ data2 <- data1 %>%
 data2$Affiliations <- word(data2$Affiliations, -1)
 
 data3 <- data2 %>% 
-  group_by(id, Year) %>% 
+  group_by(keyid, Year) %>% 
   summarise(aff = paste(Affiliations, collapse = ",")) %>% 
   ungroup()
+
+#write.csv(data3, file="output/hkh-institution_unedited.csv")
 
 inst0 <- read_csv("output/hkh-institution.csv")
 
