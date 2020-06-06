@@ -83,11 +83,11 @@ inst.final$Collaboration_type <- factor(inst.final$Collaboration_type,
 inst_collaboration <- ggplot(inst.final, aes(x=Year, y=count, fill=Collaboration_type))+
   geom_bar(stat = "identity", position = position_dodge())+
   labs(x="Year", y="Frequency", fill="Collaboration Type")+
-  theme_bw(base_size = 10)+
+  theme_bw(base_size = 11)+
   scale_y_continuous(breaks = seq(0, 300, 25))+
   scale_fill_discrete(labels=c("Sole HKH Country", "Two or more HKH Countries",
                                "HKH and International Countries", 
-                               "Only International Countrues"))
+                               "Only International Countries"))
 
 data.c <- data3 %>% 
   separate_rows(aff, sep=",") %>% 

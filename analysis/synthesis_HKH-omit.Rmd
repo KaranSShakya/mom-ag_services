@@ -10,16 +10,6 @@ editor_options:
 
 [Return Back](synthesis_HKH.html)
 
-## Word Cloud
-Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram. The following picture is a word cloud from both the Author's Key Word and Index Key Word.
-
-It is important to note, that for this word cloud key words with a space will be divided into two. In other words, "agricultural development" will be read as two different key word "agriculture" and "development".
-
-This is a good visual representation to use in informal setting like presentations, but not for academic writing.
-
-![](pictures/hkh-worldcloud.png)
-
-***
 
 ## Key Word Frequency - Table
 Let's say you want to answer the question **How has the literature framework/priorities changed in the last five years?**

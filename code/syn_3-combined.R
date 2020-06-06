@@ -87,7 +87,7 @@ data5.s <- data5.s %>%
 
 #Filtering by Year--------
 data5.time <- data5.s %>% 
-  filter(Year >= 2016 & Year <= 2020) %>% 
+  filter(Year >= 1995 & Year <= 2020) %>% 
   select(2) 
 
 a5.time <- Corpus(VectorSource(data5.time))
@@ -95,9 +95,18 @@ a5.time <- Corpus(VectorSource(data5.time))
 a5.time.matrix <- TermDocumentMatrix(a5.time)
 a5.time.matrix1 <- as.matrix(a5.time.matrix)
 a5.time.v <- sort(rowSums(a5.time.matrix1),decreasing=TRUE)
-a5.time.d <- data.frame(word = names(a5.time.v),freq=a5.time.v)
+a5.time.d <- data.frame(word = names(a5.time.v),freq=a5.time.v) 
+
+a5.time.d <-a5.time.d %>% 
+  slice(-1,-2,-3,-5, -11, -15, -20, -21, -22, -30, -32, -39, -50)
+
+set.seed(1225)
+w1.plot <- wordcloud(words = a5.time.d$word, freq = a5.time.d$freq, min.freq = 1,
+                              max.words=50, random.order=F, rot.per=0.25, 
+                              colors=brewer.pal(8, "Dark2"), 
+                              scale=c(2.00,0.20))
 
 remove(data5.time, a5.time, a5.time.matrix, a5.time.matrix1, a5.time.v)
 
-write.csv(a5.time.d, file="output/keyword-16_20.csv")  
+#write.csv(a5.time.d, file="output/keyword-16_20.csv")  
 

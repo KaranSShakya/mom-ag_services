@@ -13,17 +13,29 @@ source("code/syn_1 - data_organize.r")
 library(gt)
 ```
 
-[Removed Analysis - Link](synthesis_HKH-omit.html)
+I have revised this website as well as rechecked my analysis to ensure that the results and analysis are as written. Please look at the steps I took and the recommended conclusion from each analysis.
+
+[Removed Author and Index Seperate Tables Link](synthesis_HKH-omit.html)
 
 ## Summary Statistics 
 
 **1. Summary Statistics by Year**
 
+* Focused on the **Year** column (Column D) of your excel file and summarized it. 
+
 ![](pic/summary_year.png)
+
+* This result is in Sheet 1 named **Year Summary**. 
+
+* The total is 838, which illustrates that your dataset consists of 838 papers.
 
 **2. Summary Statistics by Country**
 
+* To find out summary by country, the **Geog Unit** (Column AH)'s values were renamed. (Example: "HKH-NP" was renamed to "Nepal"). There **1 NA** which was omitted. 
+
 ![](pic/summary_country.png)
+
+* This table is in the final excel file as **Country Summary**. 
 
 ***
 
@@ -44,11 +56,24 @@ I realized that I have yet to show you **R** so here is a sample of the codes I 
 
 * This is the 5 years interval picture for both keywords. I will send you the full excel file of these keywords soon, so you can select and reconsider some variables you want to remove or keep.
 
-* Suggestion is to remove keywords such as "agriculture" as these are all encompassing. But I would leave it to you to select the keywords you find effective. 
+* Suggestion is to remove keywords such as "agriculture" as these are all encompassing. But I would leave it to you to select the keywords you find effective.
 
 ***
 
-## Trends over Time - Groupped Keywords
+## Word Cloud (Combined Keywords)
+
+Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram.
+
+I can still work on the visuals for this Word Cloud, so let me know if I need to edit this.
+
+```{r eval=T, echo=F, warning=F, error=F, message=F}
+source("code/syn_3-combined.r")
+w1.plot
+```
+
+***
+
+## Trends over Time (NOT FINAL)
 ```{r eval=T, echo=F, warning=F, message=F}
 source("code/syn_4-linegraph.R")
 ```
@@ -102,6 +127,17 @@ inst_collaboration
 Here is the table that summarizes the country that each country came from:
 
 ![](pic/institution_country.png)
+
+* You can access both the raw table and the figure above in the **Insitution - Collaboration** sheet of the excel file. 
+
+***
+
+## Publication by Country
+```{r eval=T, echo=F}
+country.plot
+```
+
+* This diagram is in the **Country- Summary** sheet.
 
 ***
 

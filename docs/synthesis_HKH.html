@@ -379,7 +379,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -388,7 +388,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -397,10 +397,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-06-05
+<strong>Last updated:</strong> 2020-06-06
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>mom-ag_services/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -416,12 +416,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeb641f8c10e89a4d14f11a9b4ccfd75601e2bbfe9targetblankb641f8ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/b641f8c10e89a4d14f11a9b4ccfd75601e2bbfe9" target="_blank">b641f8c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeed4cac76dea92d5a7429d4702b97d2247f605bfctargetblanked4cac7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/ed4cac76dea92d5a7429d4702b97d2247f605bfc" target="_blank">ed4cac7</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeb641f8c10e89a4d14f11a9b4ccfd75601e2bbfe9targetblankb641f8ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeed4cac76dea92d5a7429d4702b97d2247f605bfctargetblanked4cac7a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/b641f8c10e89a4d14f11a9b4ccfd75601e2bbfe9" target="_blank">b641f8c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/ed4cac76dea92d5a7429d4702b97d2247f605bfc" target="_blank">ed4cac7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -510,8 +510,17 @@ Ignored files:
     Ignored:    analysis/.Rhistory
     Ignored:    code/.Rhistory
 
+Untracked files:
+    Untracked:  output/FIG-country_publications.jpeg
+    Untracked:  output/FIG-institution_collaboration.jpeg
+
 Unstaged changes:
-    Modified:   code/syn_6-sankey.R
+    Modified:   analysis/synthesis_HKH-omit.Rmd
+    Modified:   analysis/synthesis_HKH.Rmd
+    Modified:   code/syn_1 - data_organize.R
+    Modified:   code/syn_3-combined.R
+    Modified:   code/syn_5-institute.R
+    Modified:   output/excel-organize_final.xlsx
 
 </code></pre>
 <p>
@@ -550,6 +559,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaranSShakya/mom-ag_services/ed4cac76dea92d5a7429d4702b97d2247f605bfc/docs/synthesis_HKH.html" target="_blank">ed4cac7</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-05
+</td>
+<td>
+santey test comits (end of day)
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1084,13 +1110,27 @@ Creating new synthesis page
 </div>
 </div>
 </div>
-<p><a href="synthesis_HKH-omit.html">Removed Analysis - Link</a></p>
+<p>I have revised this website as well as rechecked my analysis to ensure that the results and analysis are as written. Please look at the steps I took and the recommended conclusion from each analysis.</p>
+<p><a href="synthesis_HKH-omit.html">Removed Author and Index Seperate Tables Link</a></p>
 <div id="summary-statistics" class="section level2">
 <h2>Summary Statistics</h2>
 <p><strong>1. Summary Statistics by Year</strong></p>
+<ul>
+<li>Focused on the <strong>Year</strong> column (Column D) of your excel file and summarized it.</li>
+</ul>
 <p><img src="pic/summary_year.png" /></p>
+<ul>
+<li><p>This result is in Sheet 1 named <strong>Year Summary</strong>.</p></li>
+<li><p>The total is 838, which illustrates that your dataset consists of 838 papers.</p></li>
+</ul>
 <p><strong>2. Summary Statistics by Country</strong></p>
+<ul>
+<li>To find out summary by country, the <strong>Geog Unit</strong> (Column AH)’s values were renamed. (Example: “HKH-NP” was renamed to “Nepal”). There <strong>1 NA</strong> which was omitted.</li>
+</ul>
 <p><img src="pic/summary_country.png" /></p>
+<ul>
+<li>This table is in the final excel file as <strong>Country Summary</strong>.</li>
+</ul>
 <hr />
 </div>
 <div id="combining-author-and-index-keywords" class="section level2">
@@ -1108,47 +1148,17 @@ Creating new synthesis page
 </ul>
 <hr />
 </div>
-<div id="trends-over-time---groupped-keywords" class="section level2">
-<h2>Trends over Time - Groupped Keywords</h2>
-<p>This is the crude results for the keywords that you groupped. <img src="figure/synthesis_HKH.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
-Past versions of unnamed-chunk-3-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-3-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/KaranSShakya/mom-ag_services/blob/2a263de987eac4101817533320d8b145e1d259bb/docs/figure/synthesis_HKH.Rmd/unnamed-chunk-3-1.png" target="_blank">2a263de</a>
-</td>
-<td>
-KaranSShakya
-</td>
-<td>
-2020-06-05
-</td>
-</tr>
-</tbody>
-</table>
+<div id="word-cloud-combined-keywords" class="section level2">
+<h2>Word Cloud (Combined Keywords)</h2>
+<p>Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram.</p>
+<p>I can still work on the visuals for this Word Cloud, so let me know if I need to edit this.</p>
+<p><img src="figure/synthesis_HKH.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>NULL</code></pre>
+<hr />
 </div>
-</div>
-<p>This is an <strong>area chart</strong>. Which shows how each attribute contributes to the total over time. <img src="figure/synthesis_HKH.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="trends-over-time-not-final" class="section level2">
+<h2>Trends over Time (NOT FINAL)</h2>
+<p>This is the crude results for the keywords that you groupped. <img src="figure/synthesis_HKH.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
 Past versions of unnamed-chunk-4-1.png
@@ -1197,25 +1207,7 @@ KaranSShakya
 </table>
 </div>
 </div>
-<p>Recommendations:</p>
-<ul>
-<li><p>I would remove 1995 and 2020. 2020 is not complete, and showing the figures for 2020 does not help.</p></li>
-<li><p>The sudden increase in 2015 is simply due to the fact that there are soo many more papers in 2015.</p></li>
-<li><p>I would also revise on the keywords. The 5 categories make sense, but the keywords you have selected for each category can be improved upon. For example, keywords like “crop production” is really generic, and can be a keyword in a paper that is entirely about climate change. To see a better trend, and a better graph, I woudl revise the keywords so that each keyword is specific to its category. Another example is “sustainability”. This is another generic keyword that can be applicable to not only engagement. The keywords for drivers are good.</p></li>
-<li><p>Let me know if there are any edits to this graph you would like to see. Visually or graphically.</p></li>
-</ul>
-<hr />
-</div>
-<div id="institution-collaboration" class="section level2">
-<h2>Institution Collaboration</h2>
-<p><strong>Methodology:</strong></p>
-<ul>
-<li><p>Example, in the <strong>Affiliation</strong> excel column author’s information are given as follows: <strong>Kaldhara, Kathmandu, Nepal ; 12 Road, Assam, India</strong></p></li>
-<li><p>I seperated each values by <strong>;</strong> then I select the last string character which resulted in <strong>Nepal, India</strong>. This is how I made the graphs.</p></li>
-<li><p>The accuracy of this table is dependent on how well Scopus formats their data, and since I am only looking at countries, performing intra-country analysis is impossible. So to compensate for this omission I added two more variables: <strong>Only HKH Country</strong> to <strong>Only international countries</strong>.</p></li>
-<li><p>So far, apart from 3 columns, I had a good result meaning SCOPUS organizes their data well.</p></li>
-</ul>
-<p><img src="figure/synthesis_HKH.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>This is an <strong>area chart</strong>. Which shows how each attribute contributes to the total over time. <img src="figure/synthesis_HKH.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
 Past versions of unnamed-chunk-5-1.png
@@ -1275,20 +1267,24 @@ KaranSShakya
 </table>
 </div>
 </div>
-<p><strong>What we can see:</strong></p>
+<p>Recommendations:</p>
 <ul>
-<li><p>There is a lot more HKH-international collaboration than HKH-HKH collaboration.</p></li>
-<li><p>Sole HKH countries produced the most papers in all our time intervals.</p></li>
-<li><p>HKH with HKH had the lowest collaboration in all our time intervals.</p></li>
-<li><p><strong>Important</strong> HKH and International Country can also mean there are multiple HKH countries involved with writing the paper. (Nepal + India + USA) would count as <em>HKH and International</em> rather than <em>Two or more HKH countries</em>.</p></li>
+<li><p>I would remove 1995 and 2020. 2020 is not complete, and showing the figures for 2020 does not help.</p></li>
+<li><p>The sudden increase in 2015 is simply due to the fact that there are soo many more papers in 2015.</p></li>
+<li><p>I would also revise on the keywords. The 5 categories make sense, but the keywords you have selected for each category can be improved upon. For example, keywords like “crop production” is really generic, and can be a keyword in a paper that is entirely about climate change. To see a better trend, and a better graph, I woudl revise the keywords so that each keyword is specific to its category. Another example is “sustainability”. This is another generic keyword that can be applicable to not only engagement. The keywords for drivers are good.</p></li>
+<li><p>Let me know if there are any edits to this graph you would like to see. Visually or graphically.</p></li>
 </ul>
-<p>Here is the table that summarizes the country that each country came from:</p>
-<p><img src="pic/institution_country.png" /></p>
 <hr />
 </div>
-<div id="sankey-diagram-test" class="section level2">
-<h2>Sankey Diagram (TEST)</h2>
-<p>I have never built a Sankey Diagram so this will still be a work in progress. Here is where I am now:</p>
+<div id="institution-collaboration" class="section level2">
+<h2>Institution Collaboration</h2>
+<p><strong>Methodology:</strong></p>
+<ul>
+<li><p>Example, in the <strong>Affiliation</strong> excel column author’s information are given as follows: <strong>Kaldhara, Kathmandu, Nepal ; 12 Road, Assam, India</strong></p></li>
+<li><p>I seperated each values by <strong>;</strong> then I select the last string character which resulted in <strong>Nepal, India</strong>. This is how I made the graphs.</p></li>
+<li><p>The accuracy of this table is dependent on how well Scopus formats their data, and since I am only looking at countries, performing intra-country analysis is impossible. So to compensate for this omission I added two more variables: <strong>Only HKH Country</strong> to <strong>Only international countries</strong>.</p></li>
+<li><p>So far, apart from 3 columns, I had a good result meaning SCOPUS organizes their data well.</p></li>
+</ul>
 <p><img src="figure/synthesis_HKH.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-6-1">
@@ -1312,6 +1308,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/ed4cac76dea92d5a7429d4702b97d2247f605bfc/docs/figure/synthesis_HKH.Rmd/unnamed-chunk-6-1.png" target="_blank">ed4cac7</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-05
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/KaranSShakya/mom-ag_services/blob/b641f8c10e89a4d14f11a9b4ccfd75601e2bbfe9/docs/figure/synthesis_HKH.Rmd/unnamed-chunk-6-1.png" target="_blank">b641f8c</a>
@@ -1349,6 +1356,69 @@ KaranSShakya
 </table>
 </div>
 </div>
+<p><strong>What we can see:</strong></p>
+<ul>
+<li><p>There is a lot more HKH-international collaboration than HKH-HKH collaboration.</p></li>
+<li><p>Sole HKH countries produced the most papers in all our time intervals.</p></li>
+<li><p>HKH with HKH had the lowest collaboration in all our time intervals.</p></li>
+<li><p><strong>Important</strong> HKH and International Country can also mean there are multiple HKH countries involved with writing the paper. (Nepal + India + USA) would count as <em>HKH and International</em> rather than <em>Two or more HKH countries</em>.</p></li>
+</ul>
+<p>Here is the table that summarizes the country that each country came from:</p>
+<p><img src="pic/institution_country.png" /></p>
+<ul>
+<li>You can access both the raw table and the figure above in the <strong>Insitution - Collaboration</strong> sheet of the excel file.</li>
+</ul>
+<hr />
+</div>
+<div id="publication-by-country" class="section level2">
+<h2>Publication by Country</h2>
+<p><img src="figure/synthesis_HKH.Rmd/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-1">
+Past versions of unnamed-chunk-7-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/9f5aaae1cf3089cf60b20a807829f0bb0ef0e776/docs/figure/synthesis_HKH.Rmd/unnamed-chunk-7-1.png" target="_blank">9f5aaae</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>This diagram is in the <strong>Country- Summary</strong> sheet.</li>
+</ul>
+<hr />
+</div>
+<div id="sankey-diagram-test" class="section level2">
+<h2>Sankey Diagram (TEST)</h2>
+<p>I have never built a Sankey Diagram so this will still be a work in progress. Here is where I am now:</p>
+<p><img src="figure/synthesis_HKH.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
 <hr />
 <br>
 <p>
