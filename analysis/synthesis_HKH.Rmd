@@ -80,6 +80,7 @@ source("code/syn_4-linegraph.R")
 This is the crude results for the keywords that you groupped.
 ```{r eval=T, echo=F}
 pillars
+pillars.drivers
 ```
 This is an **area chart**. Which shows how each attribute contributes to the total over time.
 ```{r eval=T, echo=F}

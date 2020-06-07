@@ -30,7 +30,7 @@ data0$Geog_unit <- gsub("HKH_NP", "Nepal", data0$Geog_unit)
 data0$Geog_unit <- gsub("NKH-NP", "Nepal", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH_BD", "Bangladesh", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH-AF", "Afghanistan", data0$Geog_unit)
-data0$Geog_unit <- gsub("Otheers", "Others", data0$Geog_unit)
+data0$Geog_unit <- gsub("Others", "Others", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKh-PK", "Pakistan", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKh-IN", "India", data0$Geog_unit)
 data0$Geog_unit <- gsub("HH-PK", "Pakistan", data0$Geog_unit)
@@ -39,6 +39,8 @@ data0$Geog_unit <- gsub("HKH-MN", "Myanmar", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKh_CN", "China", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH_IN", "India", data0$Geog_unit)
 data0$Geog_unit <- gsub("HK_PK", "Pakistan", data0$Geog_unit)
+data0$Geog_unit <- gsub("HKH", "Others", data0$Geog_unit)
+data0$Geog_unit <- gsub("NA", "Others", data0$Geog_unit)
 unique(data0$Geog_unit)
 
 data.country <- data0 %>% 
@@ -46,14 +48,17 @@ data.country <- data0 %>%
   group_by(Geog_unit) %>% 
   tally() %>% 
   ungroup() %>% 
-  mutate('% of Total' = (n/905)*100)
+  mutate('% of Total' = (n/838)*100) %>% 
+  na.omit()
 names(data.country)[1] <- "Country"
 names(data.country)[2] <- "Count"
 data.country$`% of Total` <- round(data.country$`% of Total`, 1)
 
 country <- c("Afghanistan", "Bangladesh", "Bhutan", "China", "India",
              "Myanmar", "Nepal", "Pakistan", "HKH", "Others")
-publication <- c(3, 22, 9, 229, 243, 34, 78, 50, 88, 82)
+publication <- c(3, 22, 9, 229, 242, 34, 78, 50, 88, 82)
+
+data.country$Country <- as.factor(data.country$Country)
 
 country1 <- data.frame(name=country, value=publication)
 country1$name <- as.factor(country1$name)

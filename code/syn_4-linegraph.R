@@ -101,13 +101,28 @@ all.final <- all.l %>%
   summarise(Sum = sum(Freq)) %>% 
   ungroup()
 
+all.select <- all.final %>% 
+  filter(Year >= 1996 & Year <= 2019) %>% 
+  filter(Attribute != "drivers")
 
-pillars <- ggplot(all.final, aes(x=Year, y=Sum))+
+pillars <- ggplot(all.select, aes(x=Year, y=Sum))+
   geom_line(aes(color=Attribute))+
   labs(y="Frequency of Keywords", color="Keyword Attribute")+
   theme_bw(base_size = 11)+
-  scale_y_continuous(breaks = seq(0, 35, 5))
+  scale_y_continuous(breaks = seq(0, 35, 5))+
+  scale_x_continuous(limits = c(1996, 2019), breaks = seq(1996, 2018, 2))
   
+all.drivers <- all.final %>% 
+  filter(Year >= 1996 & Year <= 2019) %>% 
+  filter(Attribute == "drivers")
+
+pillars.drivers <- ggplot(all.drivers, aes(x=Year, y=Sum))+
+  geom_line(aes(color=Attribute))+
+  labs(y="Frequency of Keywords", color="Keyword Attribute")+
+  scale_color_manual(values=c("yellow3"))+
+  theme_bw(base_size = 11)+
+  scale_y_continuous(breaks = seq(0, 35, 5))+
+  scale_x_continuous(limits = c(1996, 2019), breaks = seq(1996, 2018, 2))
 
 geom_area <- ggplot(all.final, aes(x=Year, y=Sum))+
   geom_area(aes(color=Attribute))+
