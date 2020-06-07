@@ -100,11 +100,10 @@ a5.time.d <- data.frame(word = names(a5.time.v),freq=a5.time.v)
 a5.time.d <-a5.time.d %>% 
   slice(-1,-2,-3,-5, -11, -15, -20, -21, -22, -30, -32, -39, -50)
 
-set.seed(1225)
 w1.plot <- wordcloud(words = a5.time.d$word, freq = a5.time.d$freq, min.freq = 1,
-                              max.words=50, random.order=F, rot.per=0.25, 
+                              max.words=40, random.order=F, rot.per=0, 
                               colors=brewer.pal(8, "Dark2"), 
-                              scale=c(2.00,0.20))
+                              scale=c(2.00,0.10))
 
 remove(data5.time, a5.time, a5.time.matrix, a5.time.matrix1, a5.time.v)
 
