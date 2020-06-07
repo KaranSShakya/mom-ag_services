@@ -143,7 +143,10 @@ country.plot
 ***
 
 ## Sankey Diagram (TEST)
-I have never built a Sankey Diagram so this will still be a work in progress. Here is where I am now:
+
+* Afghanistan, Bangladesh, Bhutan have so small data that the sankey diagram tries to cram it.
+
+* Instead of adding another axis, I would make another Sankey diagram just for keywords. The process of adding another axis in Sankey is not as easy as the weight of each box cannot be overlapped. 
 
 ```{r eval=T, echo=F, warning=F, message=F}
 source("code/syn_6-sankey.R")
