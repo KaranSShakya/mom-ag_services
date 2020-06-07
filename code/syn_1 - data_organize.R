@@ -38,6 +38,7 @@ data0$Geog_unit <- gsub("HKH-MM", "Myanmar", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH-MN", "Myanmar", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKh_CN", "China", data0$Geog_unit)
 data0$Geog_unit <- gsub("HKH_IN", "India", data0$Geog_unit)
+data0$Geog_unit <- gsub("HK_PK", "Pakistan", data0$Geog_unit)
 unique(data0$Geog_unit)
 
 data.country <- data0 %>% 

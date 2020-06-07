@@ -73,13 +73,13 @@ w1.plot
 
 ***
 
-## Trends over Time (NOT FINAL)
+## Pillars - Keyword over Time 
 ```{r eval=T, echo=F, warning=F, message=F}
 source("code/syn_4-linegraph.R")
 ```
 This is the crude results for the keywords that you groupped.
 ```{r eval=T, echo=F}
-raw
+pillars
 ```
 This is an **area chart**. Which shows how each attribute contributes to the total over time.
 ```{r eval=T, echo=F}

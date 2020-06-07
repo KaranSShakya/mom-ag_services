@@ -4,10 +4,10 @@ library(dplyr)
 library(readxl)
 library(readr)
 
-key <- read_csv("data/hkh-keyword.csv") %>% 
+key <- read_csv("output/keywords_combined_all.csv") %>%   
   ungroup() %>% 
   select(-1) %>% 
-  mutate(id=seq(1:13115)) %>% 
+  mutate(id=seq(1:12127)) %>% 
   select(3,1,2)
 names(key)[3] <- "Keyword"
 
@@ -102,9 +102,12 @@ all.final <- all.l %>%
   ungroup()
 
 
-raw <- ggplot(all.final, aes(x=Year, y=Sum))+
+pillars <- ggplot(all.final, aes(x=Year, y=Sum))+
   geom_line(aes(color=Attribute))+
-  labs(y="Count of Keywords")
+  labs(y="Frequency of Keywords", color="Keyword Attribute")+
+  theme_bw(base_size = 11)+
+  scale_y_continuous(breaks = seq(0, 35, 5))
+  
 
 geom_area <- ggplot(all.final, aes(x=Year, y=Sum))+
   geom_area(aes(color=Attribute))+
