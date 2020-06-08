@@ -100,8 +100,12 @@ a5.time.d <- data.frame(word = names(a5.time.v),freq=a5.time.v)
 a5.time.d <-a5.time.d %>% 
   slice(-1,-2,-3,-5, -11, -15, -20, -21, -22, -30, -32, -39, -50)
 
+a5.time.d$word <- gsub(",", "", a5.time.d$word)
+a5.time.d$word <- gsub('"', '', a5.time.d$word)
+
+set.seed(9284)
 w1.plot <- wordcloud(words = a5.time.d$word, freq = a5.time.d$freq, min.freq = 1,
-                              max.words=40, random.order=F, rot.per=0, 
+                              max.words=40, random.order=F, rot.per=0.25, 
                               colors=brewer.pal(8, "Dark2"), 
                               scale=c(2.00,0.10))
 

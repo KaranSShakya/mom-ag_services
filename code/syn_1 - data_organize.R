@@ -70,7 +70,7 @@ country1 <- country1 %>%
 country.plot <- ggplot(country1, aes(x=name_re, y=value))+
   geom_bar(stat="identity", fill="skyblue2", color="skyblue4")+
   theme_bw(base_size = 10)+
-  labs(x='Country Name', y='Frequency')+
+  labs(x=element_blank(), y='Number of Publications')+
   theme(axis.text.x = element_text(angle = 30, hjust = 1))+
   geom_text(aes(label=value), position=position_dodge(width=0.8), vjust=-0.25)
 

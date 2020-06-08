@@ -61,7 +61,7 @@ key.f1 <- key.f %>%
   select(3,1) %>% 
   group_by(Year) %>% 
   tally()
-names(key.f1)[2] <- "foundation"
+names(key.f1)[2] <- "Foundations"
 
 key_count <- function(x){
   x1 <- x %>% 
@@ -71,13 +71,13 @@ key_count <- function(x){
 }
 
 key.fu1 <- key_count(key.fu)
-names(key.fu1)[2] <- "functional"
+names(key.fu1)[2] <- "Functions"
 key.a1 <- key_count(key.a)
-names(key.a1)[2] <- "application" 
+names(key.a1)[2] <- "Applications" 
 key.d1 <- key_count(key.d)
-names(key.d1)[2] <- "drivers"
+names(key.d1)[2] <- "Drivers"
 key.e1 <- key_count(key.e)
-names(key.e1)[2] <- "engagement"
+names(key.e1)[2] <- "Engagements"
 
 remove(key.a, key.d, key.e, key.f, key.fu)
 
@@ -102,27 +102,24 @@ all.final <- all.l %>%
   ungroup()
 
 all.select <- all.final %>% 
-  filter(Year >= 1996 & Year <= 2019) %>% 
-  filter(Attribute != "drivers")
+  filter(Attribute != "Drivers")
 
 pillars <- ggplot(all.select, aes(x=Year, y=Sum))+
   geom_line(aes(color=Attribute))+
-  labs(y="Frequency of Keywords", color="Keyword Attribute")+
+  labs(y="Frequency of Keywords", color="Framework Keywords", x=element_blank())+
   theme_bw(base_size = 11)+
-  scale_y_continuous(breaks = seq(0, 35, 5))+
-  scale_x_continuous(limits = c(1996, 2019), breaks = seq(1996, 2018, 2))
+  scale_y_continuous(breaks = seq(0, 35, 5))
   
 all.drivers <- all.final %>% 
-  filter(Year >= 1996 & Year <= 2019) %>% 
-  filter(Attribute == "drivers")
+  filter(Attribute == "Drivers")
 
 pillars.drivers <- ggplot(all.drivers, aes(x=Year, y=Sum))+
   geom_line(aes(color=Attribute))+
-  labs(y="Frequency of Keywords", color="Keyword Attribute")+
+  labs(y="Frequency of Keywords", color=element_blank(), x=element_blank())+
   scale_color_manual(values=c("yellow3"))+
   theme_bw(base_size = 11)+
   scale_y_continuous(breaks = seq(0, 35, 5))+
-  scale_x_continuous(limits = c(1996, 2019), breaks = seq(1996, 2018, 2))
+  ylim(0,35)
 
 geom_area <- ggplot(all.final, aes(x=Year, y=Sum))+
   geom_area(aes(color=Attribute))+

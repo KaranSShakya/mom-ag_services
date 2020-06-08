@@ -142,7 +142,7 @@ country.plot
 
 ***
 
-## Sankey Diagram (TEST)
+## Sankey Diagram / Alluvial Plot
 
 * Afghanistan, Bangladesh, Bhutan have so small data that the sankey diagram tries to cram it.
 
@@ -153,7 +153,33 @@ source("code/syn_6-sankey.R")
 sankey.test
 ```
 
+I have also added a simplified explanation for the Sankey Diagram (also called **alluvial** diagram in R):
+
+Lets assume we have the interval 2001 - 2005. And in this interval, Nepal has published 2 papers:
+
+Year  | Country | Papers
+------|---------|--------
+01-05 | Nepal   | 2
+
+Now, lets assume that that Nepal 1 Sole Authored paper during that year. In a table this is easy to show:
+
+Year  | Country | Papers | Sole Author
+------|---------|--------|---------------
+01-05 | Nepal   | 2      | 1
+
+But, **alluvial diagrams can only have one column with numbers**. Now, this creates a problem since both *Papers* and *Sole Author* column has numbers. To solve this, we transform the data like this:
+
+Year  | Papers | Sole Author
+------|--------|---------------
+01-05 | Nepal  | 1      
+01-05 | Nepal  | 1      
+
+We transformed the *Papers* number into a column. Since *Papers* value was 2, we simply dublicated Nepal's data twice to show that Nepal produced 2 papers. This is why, more the axis's the more rows a column will have. If we needed to add one more axis, we need to collapse the columns of all countries and all collaborations, which will create thousands of rows. Hopefully this makes sense.
+
 ***
+
+## Journal Article Summary
+
 
 
 
