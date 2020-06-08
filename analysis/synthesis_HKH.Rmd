@@ -176,7 +176,7 @@ Year  | Papers | Sole Author
 
 We transformed the *Papers* number into a column. Since *Papers* value was 2, we simply dublicated Nepal's data twice to show that Nepal produced 2 papers. This is why, more the axis's the more rows a column will have. If we needed to add one more axis, we need to collapse the columns of all countries and all collaborations, which will create thousands of rows. Hopefully this makes sense.
 
-**Important**: Here is why I cannot add **HKH** and **Others** in the Country box. The *collaboration* box is created by looking into the author's country. This means selecting the country from the **affiliation** column of your excel file. Now, even though the **Geog_unit** might show others, the authors address will always have a country. Since there is not **HKH** or **Others** in the authors address, I cannot include these two terms in the diagram. This goes back to the problem I highlighted earliers, that a Sankey diagram can only have one column with numbers. 
+**Important**: I can add **Others** and **HKH** in the diagram, but it will take a while. I would just use this one for now as a draft, and will complete the full diagram later. Combining the new countries will take some time. 
 
 ***
 
