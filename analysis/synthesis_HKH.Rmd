@@ -10,12 +10,8 @@ editor_options:
 
 ```{r eval=T, echo=F, warning=F, message=F, results='hide'}
 source("code/syn_1 - data_organize.r")
-source("code/syn_3-combined.r")
 source("code/syn_4-linegraph.R")
 source("code/syn_5-institute.R")
-source("code/syn_6-sankey.R")
-source("code/syn_8-journal.r")
-library(gt)
 ```
 
 I have revised this website as well as rechecked my analysis to ensure that the results and analysis are as written. Please look at the steps I took and the recommended conclusion from each analysis.
@@ -65,23 +61,23 @@ I realized that I have yet to show you **R** so here is a sample of the codes I 
 
 ***
 
-## Total Keywords
-Here is the un-edited top 20 frequency table for all the keywords. A full version is in the excel file in the sheet **All Keywords**. I would remove geographic keywords as well as irrelevant keywords such as "article".
-
-```{r eval=T, echo=F}
-total.20
-```
-
-***
-
 ## Word Cloud (Combined Keywords)
 
 Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram.
 
 I can still work on the visuals for this Word Cloud, so let me know if I need to edit this.
 
-```{r eval=T, echo=F, warning=F, error=F, message=F}
-w1.plot
+```{r eval=T, echo=F}
+source("code/syn_3-combined.r")
+```
+
+***
+
+## Total Keywords
+Here is the un-edited top 20 frequency table for all the keywords. A full version is in the excel file in the sheet **All Keywords**. I would remove geographic keywords as well as irrelevant keywords such as "article".
+
+```{r eval=T, echo=F}
+total.20
 ```
 
 ***
@@ -158,6 +154,8 @@ country.plot
 * Instead of adding another axis, I would make another Sankey diagram just for keywords. The process of adding another axis in Sankey is not as easy as the weight of each box cannot be overlapped. 
 
 ```{r eval=T, echo=F, warning=F, message=F}
+source("code/syn_6-sankey.R")
+source("code/syn_8-journal.r")
 sankey.test
 ```
 
