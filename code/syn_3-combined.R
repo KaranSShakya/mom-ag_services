@@ -103,7 +103,6 @@ a5.time.d <-a5.time.d %>%
 a5.time.d$word <- gsub(",", "", a5.time.d$word)
 a5.time.d$word <- gsub('"', '', a5.time.d$word)
 
-set.seed(9284)
 w1.plot <- wordcloud(words = a5.time.d$word, freq = a5.time.d$freq, min.freq = 1,
                               max.words=40, random.order=F, rot.per=0.25, 
                               colors=brewer.pal(8, "Dark2"), 
@@ -112,4 +111,17 @@ w1.plot <- wordcloud(words = a5.time.d$word, freq = a5.time.d$freq, min.freq = 1
 remove(data5.time, a5.time, a5.time.matrix, a5.time.matrix1, a5.time.v)
 
 #write.csv(a5.time.d, file="output/keyword-16_20.csv")  
+
+#Total keywords -----------
+total <- data5.s %>% 
+  select(2) %>% 
+  group_by(Combine) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  arrange(desc(n))
+
+total.20 <- total %>% 
+  head(20)
+
+
 

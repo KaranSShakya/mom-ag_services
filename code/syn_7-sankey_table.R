@@ -3,7 +3,7 @@ library(splitstackshape)
 
 #Year - Collaboration ------------
 source("code/syn_5-institute.r")
-remove(data.c, data0, data1, data2, data3, inst_collaboration, inst.95_00,
+remove(data.c, data0, data1, data2, data3, inst.95_00,
        inst.01_05, inst.06_10, inst.11_15, inst.16_20, inst.merge, inst.y, inst0)
 remove(inst.final)
 

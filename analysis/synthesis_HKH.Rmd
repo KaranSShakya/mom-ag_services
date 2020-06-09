@@ -10,6 +10,11 @@ editor_options:
 
 ```{r eval=T, echo=F, warning=F, message=F, results='hide'}
 source("code/syn_1 - data_organize.r")
+source("code/syn_3-combined.r")
+source("code/syn_4-linegraph.R")
+source("code/syn_5-institute.R")
+source("code/syn_6-sankey.R")
+source("code/syn_8-journal.r")
 library(gt)
 ```
 
@@ -60,6 +65,15 @@ I realized that I have yet to show you **R** so here is a sample of the codes I 
 
 ***
 
+## Total Keywords
+Here is the un-edited top 20 frequency table for all the keywords. A full version is in the excel file in the sheet **All Keywords**. I would remove geographic keywords as well as irrelevant keywords such as "article".
+
+```{r eval=T, echo=F}
+total.20
+```
+
+***
+
 ## Word Cloud (Combined Keywords)
 
 Word Clouds are interesting and useful visual tool that can be used to highlight key words. What a world cloud does is look into the frequency of key words. If a key word is used a lot, it will be bigger in the diagram.
@@ -67,16 +81,12 @@ Word Clouds are interesting and useful visual tool that can be used to highlight
 I can still work on the visuals for this Word Cloud, so let me know if I need to edit this.
 
 ```{r eval=T, echo=F, warning=F, error=F, message=F}
-source("code/syn_3-combined.r")
 w1.plot
 ```
 
 ***
 
 ## Pillars - Keyword over Time 
-```{r eval=T, echo=F, warning=F, message=F}
-source("code/syn_4-linegraph.R")
-```
 This is the crude results for the keywords that you groupped.
 ```{r eval=T, echo=F}
 pillars
@@ -111,7 +121,6 @@ Recommendations:
 * So far, apart from 3 columns, I had a good result meaning SCOPUS organizes their data well.
 
 ```{r eval=T, echo=F, message=F, warning=F}
-source("code/syn_5-institute.R")
 inst_collaboration
 ```
 
@@ -149,7 +158,6 @@ country.plot
 * Instead of adding another axis, I would make another Sankey diagram just for keywords. The process of adding another axis in Sankey is not as easy as the weight of each box cannot be overlapped. 
 
 ```{r eval=T, echo=F, warning=F, message=F}
-source("code/syn_6-sankey.R")
 sankey.test
 ```
 
@@ -184,7 +192,6 @@ We transformed the *Papers* number into a column. Since *Papers* value was 2, we
 Here is the unformatted summary of all the Journal article from 1995 to 2020. I have chosen top 17 because after 17, there are a lot of article with frequency 7.
 
 ```{r eval=T, echo=F}
-source("code/syn_8-journal.r")
 data.sum
 ```
 
