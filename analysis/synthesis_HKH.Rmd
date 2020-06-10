@@ -195,5 +195,22 @@ data.sum
 
 ***
 
+## Citation Burst - Test
+
+Here is an example of a citation burst diagram I made using both R and Excel. This graph was made manually, so I had to pick the words and independently fill it on an excel sheet. 
+
+![](pic/citation_test1.png)
+
+I build this graph these rules:
+
+* I removed all keywords with frequency 1. This would not tell us anything, thus why 1995 to 2002 have no keywords. Because none of the keywords repeated in a year. 
+
+* If a year had multiple top keywords, they were all included.
+
+* Food security dominated the top keywords, but in years where there were more data, I included the top 2.
+
+This is my first try, so please let me know how I can improve upon this. 
+
+***
 
 

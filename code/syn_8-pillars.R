@@ -2,16 +2,6 @@ library(tidyverse)
 library(readxl)
 library(readr)
 
-#Function -----------
-tally.all <- function(x){
-  x %>% 
-    select(1, 3) %>% 
-    group_by(Combine) %>% 
-    tally() %>% 
-    ungroup() %>% 
-    arrange(desc(n))
-}
-
 #Importing excel ----------
 foundation <- read_excel("data/pillars-raw.xlsx", 
                         sheet = "Foundation ")
@@ -42,32 +32,44 @@ all <- read_csv("output/keywords-allyear.csv") %>%
   group_by(Year, Combine) %>% 
   tally() %>% 
   ungroup()
-
 names(foundation)[1] <- "Combine"
+names(funct)[1] <- "Combine"
+names(application)[1] <- "Combine"
+names(engagement)[1] <- "Combine"
+names(drivers)[1] <- "Combine"
+
+#All Year Freq ---------------
+#Function
+tally.all <- function(x){
+  x %>% 
+    select(1, 3) %>% 
+    group_by(Combine) %>% 
+    tally() %>% 
+    ungroup() %>% 
+    arrange(desc(n))
+}
+
+
 foundation <- foundation %>% 
   mutate(Pillar = "Foundation")
 f.merge <- merge(all, foundation, by="Combine") 
 f.all <- tally.all(f.merge)
 
-names(funct)[1] <- "Combine"
 funct <- funct %>% 
   mutate(Pillar = "Function")
 fu.merge <- merge(all, funct, by="Combine")
 fu.all <- tally.all(fu.merge)
 
-names(application)[1] <- "Combine"
 application <- application %>% 
   mutate(Pillar = "Application")
 a.merge <- merge(all, application, by="Combine")
 a.all <- tally.all(a.merge)
 
-names(engagement)[1] <- "Combine"
 engagement <- engagement %>% 
   mutate(Pillar = "Engagement")
 e.merge <- merge(all, engagement, by="Combine")
 e.all <- tally.all(e.merge)
 
-names(drivers)[1] <- "Combine"
 drivers <- drivers %>% 
   mutate(Pillar = "Drivers")
 d.merge <- merge(all, drivers, by="Combine")
@@ -78,6 +80,40 @@ d.all <- tally.all(d.merge)
 # write.csv(a.all, file="output/pillars-a.csv")
 # write.csv(e.all, file="output/pillars-e.csv")
 # write.csv(d.all, file="output/pillars-d.csv")
+
+
+
+
+
+
+
+
+
+
+#Year by Year ------------
+application <- application %>% 
+  mutate(pillar = "App")
+drivers <- drivers %>% 
+  mutate(pillar = "Dri")
+engagement <- engagement %>% 
+  mutate(pillar = "Eng")
+foundation <- foundation %>% 
+  mutate(pillar = "Fou")
+funct <- funct %>% 
+  mutate(pillar = "Fun")
+
+app.2 <- merge(all, application, by="Combine", all=T) %>% 
+  na.omit()
+
+#Application
+app.3 <- app.2 %>%
+  filter(n > 1) %>% 
+  arrange(Year, desc(n))
+
+
+
+
+
 
 
 
