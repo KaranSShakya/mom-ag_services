@@ -9,3 +9,18 @@ editor_options:
 ---
 
 This page is based on the analysis conducted on Interventions and SDG's excel file.
+
+***
+
+## Dot Plot
+
+Here is the first summary diagram I made. This dot-plot is a summary statistics, which just visually represents the results. I used abbreviated names to make it simpler.
+
+A good way to understand this graph is to focus on the color. 
+
+```{r eval=T, echo=F, message=F, warning=F}
+source("code/int_2-dot_plot.r")
+```
+```{r eval=T, echo=F}
+dot1
+```
