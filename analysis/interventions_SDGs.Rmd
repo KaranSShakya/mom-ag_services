@@ -1,0 +1,11 @@
+---
+title: "Interventions and SDG's"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: true
+editor_options:
+  chunk_output_type: console
+---
+
+This page is based on the analysis conducted on Interventions and SDG's excel file.
