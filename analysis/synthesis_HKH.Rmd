@@ -157,6 +157,7 @@ country.plot
 source("code/syn_6-sankey.R")
 source("code/syn_8-journal.r")
 sankey.test
+sankey.test2
 ```
 
 I have also added a simplified explanation for the Sankey Diagram (also called **alluvial** diagram in R):

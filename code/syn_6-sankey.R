@@ -7,12 +7,22 @@ library(alluvial)
 source("code/syn_7-sankey_table.r")
 
 sankey.test <- ggplot(axis3.c, aes(axis1 = Year, axis2 = Country,
-                                   axis3 = Collaboration, y=Frequency))+
+                    axis3 = Collaboration, y=Frequency))+
   geom_alluvium(aes(fill=Country))+
   geom_stratum(alpha = 0.1)+
   scale_x_discrete(limits = c("Year", "Country", "Collaboration"), 
                    expand = c(.1, .05)) +
   geom_text(stat = "stratum", infer.label = TRUE, size=3)+
+  theme_minimal(base_size = 10)+
+  theme_bw(base_size = 9)+
+  scale_fill_brewer(palette = "Set3")
+
+sankey.test2 <- ggplot(axis3.c, aes(axis1 = Year, axis2 = Country,
+                    axis3 = Collaboration, y=Frequency))+
+  geom_alluvium(aes(fill=Country))+
+  geom_stratum(fill = "white", color="black")+
+  scale_x_discrete(limits = c("Year", "Country", "Collaboration"), 
+                   expand = c(.1, .05)) +
   theme_minimal(base_size = 10)+
   theme_bw(base_size = 9)+
   scale_fill_brewer(palette = "Set3")
