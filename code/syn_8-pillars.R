@@ -102,15 +102,26 @@ foundation <- foundation %>%
 funct <- funct %>% 
   mutate(pillar = "Fun")
 
-app.2 <- merge(all, application, by="Combine", all=T) %>% 
-  na.omit()
+#Function
+merge.pillar <- function(x){
+  x1 <- merge(all, x, by="Combine") %>% 
+    filter(n>1) %>% 
+    arrange(Year, desc(n))
+}
 
-#Application
-app.3 <- app.2 %>%
-  filter(n > 1) %>% 
-  arrange(Year, desc(n))
+pi.app <- merge.pillar(application)
+pi.dri <- merge.pillar(drivers)
+pi.eng <- merge.pillar(engagement)
+pi.fou <- merge.pillar(foundation)
+pi.fun <- merge.pillar(funct)
 
-
+write.csv(pi.app, file="output/pillar-app.csv")
+write.csv(pi.dri, file="output/pillar-dri.csv")
+write.csv(pi.eng, file="output/pillar-eng.csv")
+write.csv(pi.fou, file="output/pillar-fou.csv")
+write.csv(pi.fun, file="output/pillar-fun.csv")
+ 
+ 
 
 
 
