@@ -2,7 +2,6 @@ library(tidyverse)
 library(ggplot2)
 
 source("code/int_1-data_organize.r")
-attach(abb1)
 
 levels(data0$Rank) <- c("Cancels", "Constraints", "Consistent", "Reinforces", 
                "Indivisible")
@@ -15,13 +14,14 @@ dot1 <- ggplot(data0, aes(x=Int_abb, y=Sdg_abb, color=Rank))+
   theme_bw(base_size = 10)+
   labs(x="Interventions (Abbreviated)", y="SDGs (Abbreviated)", color="Response")
 
-abb1$Rank <- as.factor(abb1$Rank)
-levels(abb1$Rank) <- c("Cancels", "Constraints", "Consistent", "Reinforces", 
+abb.dot$Rank <- as.factor(abb.dot$Rank)
+
+levels(abb.dot$Rank) <- c("Cancels", "Constraints", "Consistent", "Reinforces", 
                         "Indivisible")
 
-abb1$Sdg_abb <- as.factor(abb1$Sdg_abb)
+abb.dot$X1 <- as.factor(abb.dot$X1)
 #Sdg_abb reorder----------
-abb1$Sdg_abb <- factor(abb1$Sdg_abb, levels = c("1.1",
+abb.dot$X1 <- factor(abb.dot$X1, levels = c("1.1",
 "1.2",
 "2a",
 "2.2",
@@ -72,12 +72,10 @@ abb1$Sdg_abb <- factor(abb1$Sdg_abb, levels = c("1.1",
 "17.8",
 "17.9"))
 
-dot2 <- ggplot(abb1, aes(x=Int_abb, y=Sdg_abb, color=Rank))+
+dot2 <- ggplot(abb.dot, aes(x=Int_abb, y=X1, color=Rank))+
   geom_point()+
   scale_color_manual(values = c("red2", "orange2", "royalblue2", 
                                 "palegreen2", "green4"))+
   theme_bw(base_size = 10)+
   labs(x="Interventions (Abbreviated)", y="SDGs (Abbreviated)", color="Response")
 
-
-detach(abb1)

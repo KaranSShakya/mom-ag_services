@@ -27,3 +27,21 @@ dot1
 ```{r eval=T, echo=F, fig.height=10, fig.width=6}
 dot2
 ```
+
+***
+
+## Principle Component Analysis
+
+**Disclaimer:** This is the first time doing a Principle Component Analysis, so I cannot guarentee the accuracy of these graphs. These graphs were prepared by following the instructions [here](http://rstudio-pubs-static.s3.amazonaws.com/53162_cd16ee63c24747459ccd180f69f07810.html).
+
+I could not figure out the labels, so I would use the bottom graph to label the top graph in powerpoint.
+
+```{r eval=T, echo=F, warning=F, message=F}
+source("code/int_2-PCA.r")
+```
+```{r eval=T, echo=F}
+no.label
+```
+```{r eval=T, echo=F}
+yes.label
+```
