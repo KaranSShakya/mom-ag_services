@@ -115,11 +115,10 @@ remove(data5.time, a5.time, a5.time.matrix, a5.time.matrix1, a5.time.v)
 
 #Total keywords -----------
 total <- data5.s %>% 
-  select(2) %>% 
-  group_by(Combine) %>% 
+  group_by(Year, Combine) %>% 
   tally() %>% 
   ungroup() %>% 
-  arrange(desc(n))
+  arrange(Year, desc(n))
 
 total.20 <- total %>% 
   head(20)

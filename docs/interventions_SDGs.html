@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-06-11
+<strong>Last updated:</strong> 2020-06-12
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree247093225e3c016cecc4bce884e86ae7ef4ce3e8targetblank2470932a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/247093225e3c016cecc4bce884e86ae7ef4ce3e8" target="_blank">2470932</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree03ab512e6e7f2e9ece86f8de39d92011a44621eetargetblank03ab512a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/03ab512e6e7f2e9ece86f8de39d92011a44621ee" target="_blank">03ab512</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree247093225e3c016cecc4bce884e86ae7ef4ce3e8targetblank2470932a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree03ab512e6e7f2e9ece86f8de39d92011a44621eetargetblank03ab512a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/247093225e3c016cecc4bce884e86ae7ef4ce3e8" target="_blank">2470932</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/03ab512e6e7f2e9ece86f8de39d92011a44621ee" target="_blank">03ab512</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -511,11 +511,15 @@ Ignored files:
     Ignored:    code/.Rhistory
 
 Untracked files:
-    Untracked:  code/int_1-data_organize.R
-    Untracked:  code/int_2-dot_plot.R
+    Untracked:  output/excel-organize_ALL_KEYWORD.xlsx
+    Untracked:  output/keywords-allyear2.csv
 
 Unstaged changes:
     Modified:   analysis/interventions_SDGs.Rmd
+    Modified:   code/int_1-data_organize.R
+    Modified:   code/int_2-dot_plot.R
+    Modified:   code/syn_3-combined.R
+    Modified:   output/excel-organize_final.xlsx
 
 </code></pre>
 <p>
@@ -554,6 +558,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/03ab512e6e7f2e9ece86f8de39d92011a44621ee/analysis/interventions_SDGs.Rmd" target="_blank">03ab512</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-11
+</td>
+<td>
+dot plot first draft.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaranSShakya/mom-ag_services/03ab512e6e7f2e9ece86f8de39d92011a44621ee/docs/interventions_SDGs.html" target="_blank">03ab512</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-11
+</td>
+<td>
+dot plot first draft.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -601,7 +639,45 @@ intervention new webpage
 <h2>Dot Plot</h2>
 <p>Here is the first summary diagram I made. This dot-plot is a summary statistics, which just visually represents the results. I used abbreviated names to make it simpler.</p>
 <p>A good way to understand this graph is to focus on the color.</p>
-<p><img src="figure/interventions_SDGs.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/interventions_SDGs.Rmd/unnamed-chunk-2-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-2-1">
+Past versions of unnamed-chunk-2-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/03ab512e6e7f2e9ece86f8de39d92011a44621ee/docs/figure/interventions_SDGs.Rmd/unnamed-chunk-2-1.png" target="_blank">03ab512</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-06-11
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/interventions_SDGs.Rmd/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -612,7 +688,7 @@ intervention new webpage
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.0.0 (2020-04-24)
 Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Catalina 10.15.4
+Running under: macOS Catalina 10.15.5
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib

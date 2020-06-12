@@ -21,6 +21,9 @@ A good way to understand this graph is to focus on the color.
 ```{r eval=T, echo=F, message=F, warning=F}
 source("code/int_2-dot_plot.r")
 ```
-```{r eval=T, echo=F}
+```{r eval=T, echo=F, fig.height=12, fig.width=6}
 dot1
+```
+```{r eval=T, echo=F, fig.height=10, fig.width=6}
+dot2
 ```
