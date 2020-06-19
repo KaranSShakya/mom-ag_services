@@ -284,7 +284,9 @@ $(document).ready(function () {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/KaranSShakya">GitHub Pages</a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -319,7 +321,7 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-05-30
+<strong>Last updated:</strong> 2020-06-19
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
@@ -343,7 +345,7 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 </div>
 <div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -410,16 +412,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeb5b087617ef0cf73af4c91d64cae00ce8c6477cbtargetblankb5b0876a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/b5b087617ef0cf73af4c91d64cae00ce8c6477cb" target="_blank">b5b0876</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree51bd8e8fca07060eca1b45beb0e9affe4154e4a6targetblank51bd8e8a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaranSShakya/mom-ag_services/tree/51bd8e8fca07060eca1b45beb0e9affe4154e4a6" target="_blank">51bd8e8</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestreeb5b087617ef0cf73af4c91d64cae00ce8c6477cbtargetblankb5b0876a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaranSShakyamomagservicestree51bd8e8fca07060eca1b45beb0e9affe4154e4a6targetblank51bd8e8a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/b5b087617ef0cf73af4c91d64cae00ce8c6477cb" target="_blank">b5b0876</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/KaranSShakya/mom-ag_services/tree/51bd8e8fca07060eca1b45beb0e9affe4154e4a6" target="_blank">51bd8e8</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -433,14 +435,15 @@ Ignored files:
     Ignored:    code/.Rhistory
 
 Untracked files:
-    Untracked:  analysis/ag_services.Rmd
-    Untracked:  analysis/synthesis_HKH.Rmd
+    Untracked:  Documents/
+    Untracked:  analysis/figure/
+    Untracked:  code/3.pca.R
+    Untracked:  output/sdg-interventions-dotplot.jpeg
 
 Unstaged changes:
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/about.Rmd
-    Modified:   analysis/index.Rmd
-    Deleted:    analysis/license.Rmd
+    Modified:   .DS_Store
+    Modified:   analysis/ag_services.Rmd
+    Modified:   code/int_2-dot_plot.R
 
 </code></pre>
 <p>
@@ -453,9 +456,69 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/ag_services.Rmd</code>) and HTML (<code>docs/ag_services.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/0f3b10f4110b8ce2a4f131713a516d22f900e34c/analysis/ag_services.Rmd" target="_blank">0f3b10f</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+<td>
+Creating new synthesis page
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaranSShakya/mom-ag_services/0f3b10f4110b8ce2a4f131713a516d22f900e34c/docs/ag_services.html" target="_blank">0f3b10f</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+<td>
+Creating new synthesis page
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -463,6 +526,64 @@ There are no past versions. Publish this analysis with <code>wflow_publish()</co
 <div id="current-demand" class="section level2">
 <h2>Current + Demand</h2>
 <p><img src="figure/ag_services.Rmd/unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/KaranSShakya/mom-ag_services/blob/0f3b10f4110b8ce2a4f131713a516d22f900e34c/docs/figure/ag_services.Rmd/unnamed-chunk-3-1.png" target="_blank">0f3b10f</a>
+</td>
+<td>
+KaranSShakya
+</td>
+<td>
+2020-05-30
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr />
+</div>
+<div id="principle-component-analysis" class="section level2">
+<h2>Principle Component Analysis</h2>
+<p>Like previously, I conducted a PCA for the different farming systems with their survey responses to each ecosystem services. The table below is the abbreviation information:</p>
+<pre><code># A tibble: 12 x 4
+   Country site        `Type of farming`                Farm_abb  
+   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;                            &lt;chr&gt;     
+ 1 Bhutan  Barsong     Mixed farming                    mixed     
+ 2 India   Martam      Cardamom based farming           card_m    
+ 3 India   Utterey     Cardamom based farming           card_u    
+ 4 India   Mokochung   Shifting cultivation -Pok System shiftpok_m
+ 5 India   Sungratsu   Shifting cultivation -Pok System shiftpok_s
+ 6 India   Ziro        GIAHS                            giahs     
+ 7 India   Ziro2       GIAHS                            giahs_2   
+ 8 India   Dima Hasao  Agri-Horti-Silvi                 agri      
+ 9 China   Dulongjiang Traditional farming              trad      
+10 China   Luisui      Intensive farming                inten     
+11 Myanmar Hakah       Shifting cultivation             shift_h   
+12 Myanmar Falam       Shifting cultivation             shift_f   </code></pre>
+<p>This is the labelled PCA: <img src="figure/ag_services.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /> This is the unlabelled PCA: <img src="figure/ag_services.Rmd/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <hr />
 <br>
 <p>
@@ -474,7 +595,7 @@ There are no past versions. Publish this analysis with <code>wflow_publish()</co
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.0.0 (2020-04-24)
 Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Catalina 10.15.4
+Running under: macOS Catalina 10.15.5
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
@@ -487,27 +608,27 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] gridExtra_2.3   ggrepel_0.8.2   ggthemes_4.2.0  forcats_0.5.0  
- [5] stringr_1.4.0   dplyr_0.8.5     purrr_0.3.4     readr_1.3.1    
- [9] tidyr_1.0.3     tibble_3.0.1    ggplot2_3.3.0   tidyverse_1.3.0
-[13] workflowr_1.6.2
+ [1] ggfortify_0.4.10 readxl_1.3.1     gridExtra_2.3    ggrepel_0.8.2   
+ [5] ggthemes_4.2.0   forcats_0.5.0    stringr_1.4.0    dplyr_0.8.5     
+ [9] purrr_0.3.4      readr_1.3.1      tidyr_1.0.3      tibble_3.0.1    
+[13] ggplot2_3.3.0    tidyverse_1.3.0  workflowr_1.6.2 
 
 loaded via a namespace (and not attached):
- [1] tidyselect_1.1.0 xfun_0.13        haven_2.2.0      lattice_0.20-41 
- [5] colorspace_1.4-1 vctrs_0.3.0      generics_0.0.2   htmltools_0.4.0 
- [9] yaml_2.2.1       rlang_0.4.6      later_1.0.0      pillar_1.4.4    
-[13] withr_2.2.0      glue_1.4.1       DBI_1.1.0        dbplyr_1.4.3    
-[17] modelr_0.1.7     readxl_1.3.1     lifecycle_0.2.0  munsell_0.5.0   
-[21] gtable_0.3.0     cellranger_1.1.0 rvest_0.3.5      evaluate_0.14   
-[25] labeling_0.3     knitr_1.28       httpuv_1.5.2     fansi_0.4.1     
-[29] broom_0.5.6      Rcpp_1.0.4.6     promises_1.1.0   backports_1.1.6 
-[33] scales_1.1.1     jsonlite_1.6.1   farver_2.0.3     fs_1.4.1        
-[37] hms_0.5.3        digest_0.6.25    stringi_1.4.6    grid_4.0.0      
-[41] rprojroot_1.3-2  cli_2.0.2        tools_4.0.0      magrittr_1.5    
-[45] crayon_1.3.4     pkgconfig_2.0.3  ellipsis_0.3.0   xml2_1.3.2      
-[49] reprex_0.3.0     lubridate_1.7.8  rstudioapi_0.11  assertthat_0.2.1
-[53] rmarkdown_2.1    httr_1.4.1       R6_2.4.1         nlme_3.1-147    
-[57] git2r_0.27.1     compiler_4.0.0  </code></pre>
+ [1] Rcpp_1.0.4.6     lubridate_1.7.8  lattice_0.20-41  utf8_1.1.4      
+ [5] assertthat_0.2.1 rprojroot_1.3-2  digest_0.6.25    R6_2.4.1        
+ [9] cellranger_1.1.0 backports_1.1.6  reprex_0.3.0     evaluate_0.14   
+[13] httr_1.4.1       pillar_1.4.4     rlang_0.4.6      rstudioapi_0.11 
+[17] whisker_0.4      rmarkdown_2.1    labeling_0.3     munsell_0.5.0   
+[21] broom_0.5.6      compiler_4.0.0   httpuv_1.5.2     modelr_0.1.7    
+[25] xfun_0.13        pkgconfig_2.0.3  htmltools_0.4.0  tidyselect_1.1.0
+[29] fansi_0.4.1      crayon_1.3.4     dbplyr_1.4.3     withr_2.2.0     
+[33] later_1.0.0      grid_4.0.0       nlme_3.1-147     jsonlite_1.6.1  
+[37] gtable_0.3.0     lifecycle_0.2.0  DBI_1.1.0        git2r_0.27.1    
+[41] magrittr_1.5     scales_1.1.1     cli_2.0.2        stringi_1.4.6   
+[45] farver_2.0.3     fs_1.4.1         promises_1.1.0   xml2_1.3.2      
+[49] ellipsis_0.3.0   generics_0.0.2   vctrs_0.3.0      tools_4.0.0     
+[53] glue_1.4.1       hms_0.5.3        yaml_2.2.1       colorspace_1.4-1
+[57] rvest_0.3.5      knitr_1.28       haven_2.2.0     </code></pre>
 </div>
 </div>
 

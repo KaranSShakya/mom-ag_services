@@ -42,5 +42,25 @@ ggplot(cur_dem, aes(x=avg_c, y=eco_ser, color=avg_d))+
   facet_grid(rows = vars(eco_type), scales="free")
 ```
 
+***
+
+## Principle Component Analysis
+Like previously, I conducted a PCA for the different farming systems with their survey responses to each ecosystem services. The table below is the abbreviation information:
+```{r eval=T, echo=F, warning=F, message=F}
+source("code/3.pca.r")
+```
+```{r eval=T, echo=F}
+pca.table
+```
+This is the labelled PCA:
+```{r eval=T, echo=F}
+label_true
+```
+This is the unlabelled PCA:
+```{r eval=T, echo=F}
+label_false
+```
 
 ***
+
+

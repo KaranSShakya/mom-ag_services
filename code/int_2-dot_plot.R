@@ -76,6 +76,6 @@ dot2 <- ggplot(abb.dot, aes(x=Int_abb, y=X1, color=Rank))+
   geom_point()+
   scale_color_manual(values = c("red2", "orange2", "royalblue2", 
                                 "palegreen2", "green4"))+
-  theme_bw(base_size = 10)+
+  theme_bw(base_size = 9)+
   labs(x="Interventions (Abbreviated)", y="SDGs (Abbreviated)", color="Response")
 
