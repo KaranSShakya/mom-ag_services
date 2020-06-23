@@ -1,5 +1,6 @@
 library(tidyverse)
 library(readxl)
+library(readr)
 
 data0 <- read_excel("data/synthesis_HKH-final.xlsx") %>% 
   mutate(Keyid = seq(1, 838, 1))
@@ -91,3 +92,37 @@ remove(comb0, comb1, comb.a, comb.i)
 
 
 #Affiliations ----
+inst0 <- read_csv("output/hkh-institution_unedited.csv") %>% 
+  select(-1)
+names(inst0)[1] <- "Keyid"
+names(inst0)[3] <- "Institution"
+
+inst1 <- inst0 %>% 
+  select(1,4)
+
+data3 <- merge(data2, inst1, by="Keyid", all=T) %>% 
+  select(-4)
+
+remove(inst0, inst1, data1, data2)
+
+
+#Year Intervals ----
+data3$Year_int <- NA
+
+data3$Year_int <- ifelse(data3$Year <= 2000, "1996-2000",
+                         ifelse(data3$Year >= 2001 & data3$Year <= 2005, "2001-2005",
+                         ifelse(data3$Year >= 2006 & data3$Year <= 2010, "2006-2010",
+                         ifelse(data3$Year >= 2011 & data3$Year <= 2015, "2011-2015",
+                                "2016-2020"))))
+data3$Year_int <- as.factor(data3$Year_int)
+
+
+
+#Collaboration Text ----
+names(data3)[5] <- "Collaboration"
+data3$Collaboration <- as.factor(data3$Collaboration)
+
+data3$Collaboration <-  recode(data3$Collaboration, q = "Sole Country", 
+       w = "Two or more HKH Countries",
+       e = "HKH and International Countries",
+       r = "Only International Countries")
