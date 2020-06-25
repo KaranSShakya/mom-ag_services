@@ -122,7 +122,7 @@ data3$Year_int <- as.factor(data3$Year_int)
 names(data3)[5] <- "Collaboration"
 data3$Collaboration <- as.factor(data3$Collaboration)
 
-data3$Collaboration <-  recode(data3$Collaboration, q = "Sole Country", 
+data3$Collaboration <- recode(data3$Collaboration, q = "Sole Country", 
        w = "Two or more HKH Countries",
        e = "HKH and International Countries",
        r = "Only International Countries")

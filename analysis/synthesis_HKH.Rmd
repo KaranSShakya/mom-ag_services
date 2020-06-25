@@ -214,4 +214,25 @@ This is my first try, so please let me know how I can improve upon this.
 
 ***
 
+## New Sankey Diagrams
+```{r eval=T, echo=F}
+source("code/syn_10-sankey_diagram2.r")
+```
+This is the first test Sankey diagram and far from complete. I just wanted you to see this base product and make suggestions to make this diagram more legible and better.
+```{r eval=T, echo=F}
+sankey.draft1
+```
+I have couple of suggestions:
+
+* Since labels are hard to adjust, the best case is to write the labels in PowerPoint.
+
+* I would combine **Article in Press** to **Article** and **Book** to **Book Chapter**.
+
+* There are some new pillars in your excel file. I will try to fill it, but can you give me the full forms of the pillars. 
+
+* Let me know if the colors are too hard to distinguish. I can manually select a color for each country variable.
+
+***
+
+
 
