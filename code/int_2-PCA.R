@@ -2,6 +2,7 @@ library(tidyverse)
 library(ggplot2)
 library(ggfortify)
 library(gridExtra)
+library(factoextra)
 
 abb0 <- read_csv("data/intervention-sdg-abb.csv")
 abb.t <- read_csv("data/intervention-sdg-abb.csv")
@@ -85,3 +86,5 @@ no.label <- autoplot(prcomp(test2), data=abb.t, label=F)+
   theme_bw()+
   labs(x="Principle Component 1", y="Principle Component 2")
 
+res.test <- prcomp(test2, scale=T)
+fviz_pca_ind(res.test, repel = T)
