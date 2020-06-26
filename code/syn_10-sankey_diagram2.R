@@ -35,6 +35,11 @@ sankey1$Geog_unit <- gsub("AF", "Afghanistan", sankey1$Geog_unit)
 
 sankey1$Geog_unit <- as.factor(sankey1$Geog_unit)
 
+sankey1$Geog_unit <- factor(sankey1$Geog_unit, levels = c("Afghanistan", 
+                              "Bangladesh", "Bhutan", "China",
+                              "India", "Myanmar", "Nepal", "Pakistan", "HKH",
+                              "Other"))
+  
 #Collaboration ----
 names(sankey1)[3] <- "Collaboration"
 sankey1$Collaboration <- as.factor(sankey1$Collaboration)
@@ -51,35 +56,86 @@ names(sankey1)[4] <- "Publication"
 
 sankey1$Publication <- as.factor(sankey1$Publication)
 
+sankey1$Publication <- recode(sankey1$Publication, 'Article' = "Article",
+                              'Review' = "Review",
+                              'Article in Press' = "Article",
+                              'Book' = "Book",
+                              'Book Chapter' = "Book")
+
 #Pillars ----
 sankey1$Pillars <- as.factor(sankey1$Pillars)
+
+sankey1$Pillars <- recode(sankey1$Pillars, FUN = "Functions",
+                          ENG = "Engagement",
+                          FOU = "Foundation",
+                          APP = "Application",
+                          App = "Application",
+                          ENF = "ENF",
+                          COM = "COM")
 
 #Sankey diagram ----
 sankeyF <- sankey1 %>% 
   select(-1)
 
-sankey.draft1 <- ggplot(sankeyF, aes(axis1 = Year_int, axis2 = Geog_unit,
+#sankey.draft1
+sankey1 <- ggplot(sankeyF, aes(axis1 = Year_int, axis2 = Geog_unit,
                     axis3 = Collaboration, axis4 = Publication, 
                     axis5 = Pillars))+
-  geom_alluvium(aes(fill=Geog_unit))+
+  geom_alluvium(aes(fill=Geog_unit), knot.pos = 0.3)+
   labs(fill="Country")+
   geom_stratum(alpha = 0.1)+
   theme_minimal(base_size = 10)+
-  scale_fill_brewer(palette = "Set3")+
+  theme(panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(size = 11))+
+  scale_fill_manual(values = c("aquamarine4", "yellow3", "thistle1",
+                               "salmon2", "skyblue2", "sandybrown",
+                               "palegreen3", "plum2", "grey54",
+                               "grey42"))+
   scale_x_discrete(limits = c("Year", "Country", "Collaboration",
                               "Publication", "Pillars"), 
-                   expand = c(.1, .05))+
+                   expand = c(0.01, 0.01))+
   geom_text(stat = "stratum", infer.label = TRUE, size=3)
 
-ggplot(sankeyF, aes(axis1 = Year_int, axis2 = Geog_unit,
+#sankey.draft2
+sankey2 <- ggplot(sankeyF, aes(axis1 = Year_int, axis2 = Geog_unit,
                     axis3 = Collaboration, axis4 = Publication, 
                     axis5 = Pillars))+
-  geom_alluvium(aes(fill=Geog_unit))+
+  geom_alluvium(aes(fill=Geog_unit), knot.pos = 0.3)+
   labs(fill="Country")+
   geom_stratum(alpha = 0.1)+
   theme_minimal(base_size = 10)+
-  scale_fill_brewer(palette = "Set3")+
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size = 11))+
+  scale_fill_manual(values = c("aquamarine4", "yellow3", "thistle1",
+                               "salmon2", "skyblue2", "sandybrown",
+                               "palegreen3", "plum2", "grey54",
+                               "grey42"))+
   scale_x_discrete(limits = c("Year", "Country", "Collaboration",
                               "Publication", "Pillars"), 
-                   expand = c(.1, .05))+
-  geom_text_repel(stat="stratum", infer.label=T, size=3)
+                   expand = c(0.01, 0.01))
+
+#sankey.draft3
+sankey3 <- ggplot(sankeyF, aes(axis1 = Year_int, axis2 = Geog_unit,
+                    axis3 = Collaboration, axis4 = Publication, 
+                    axis5 = Pillars))+
+  geom_alluvium(aes(fill=Geog_unit), knot.pos = 0.3)+
+  labs(fill="Country")+
+  geom_stratum()+
+  theme_minimal(base_size = 10)+
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size = 11))+
+  scale_fill_manual(values = c("aquamarine4", "yellow3", "thistle1",
+                               "salmon2", "skyblue2", "sandybrown",
+                               "palegreen3", "plum2", "grey54",
+                               "grey42"))+
+  scale_x_discrete(limits = c("Year", "Country", "Collaboration",
+                              "Publication", "Pillars"), 
+                   expand = c(0.01, 0.01))
+
+#ggsave(filename = "sankey1_nolabels2.png", plot=sankey3, device = "png", dpi=300)
