@@ -88,3 +88,5 @@ no.label <- autoplot(prcomp(test2), data=abb.t, label=F)+
 
 res.test <- prcomp(test2, scale=T)
 fviz_pca_ind(res.test, repel = T)
+
+# Bi plot ----

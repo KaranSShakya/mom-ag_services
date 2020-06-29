@@ -3,6 +3,7 @@ library(readxl)
 library(ggplot2)
 library(ggfortify)
 library(gridExtra)
+library(factoextra)
 
 pca0 <- read_excel("data/modified.xlsx")
 
@@ -23,4 +24,13 @@ label_false <- autoplot(prcomp(pca2), data=pca1, label=F)+
 
 pca.table <- pca0 %>% 
   select(1:4)
+
+#Bi plot ----
+pca2 <- pca1 %>% 
+  remove_rownames() %>% 
+  column_to_rownames(var="Farm_abb")
+
+res.pca <- prcomp(pca2, scale=T)
+
+fviz_pca_biplot(res.pca, repel = T)
 
