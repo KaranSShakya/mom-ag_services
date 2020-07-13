@@ -123,5 +123,16 @@ total <- data5.s %>%
 total.20 <- total %>% 
   head(20)
 
+total.decade <- total %>% 
+  filter(Year >= 2010) %>% 
+  arrange(Year, desc(n))
 
+total.decadeT <- total.decade %>% 
+  select(-1) %>% 
+  group_by(Combine) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  arrange(desc(n))
+
+write.csv(total.decadeT, file="output/keyword_decade-all.csv")
 
