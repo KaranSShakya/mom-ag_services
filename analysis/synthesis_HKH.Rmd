@@ -220,7 +220,7 @@ source("code/syn_10-sankey_diagram2.r")
 ```
 This is the first test Sankey diagram and far from complete. I just wanted you to see this base product and make suggestions to make this diagram more legible and better.
 ```{r eval=T, echo=F}
-sankey.draft1
+sankey1
 ```
 I have couple of suggestions:
 
@@ -233,6 +233,8 @@ I have couple of suggestions:
 * Let me know if the colors are too hard to distinguish. I can manually select a color for each country variable.
 
 ***
+
+
 
 
 

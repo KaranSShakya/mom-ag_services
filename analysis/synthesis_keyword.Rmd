@@ -1,0 +1,19 @@
+---
+title: "HKH - Keyword Trend"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+## Keywords Trends
+
+```{r eval=T, echo=F, warning=F, message=F}
+source("code/syn_11-keyword_trends.r")
+plot.simple
+plot.simple2
+plot.combine
+plot.relative
+```
