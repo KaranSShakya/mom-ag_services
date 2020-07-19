@@ -398,7 +398,7 @@ plot6 <- ggplot(Agrobio.r, aes(x=Year))+
   scale_y_continuous("Absolute Trend", breaks = c(0,180,90), limits = c(0,180), 
                      sec.axis = sec_axis(~.*1, name = "Relative Trend (%)",
                                          breaks=c(0,180,90)))+
-  ggtitle("Drivers of Change")+
+  ggtitle("Agrobiodiversity Extent")+
   labs(x="", color="")+
   theme_classic(base_size = 12)+
   theme(plot.title = element_text(hjust=0.5, face="bold", size=14),
