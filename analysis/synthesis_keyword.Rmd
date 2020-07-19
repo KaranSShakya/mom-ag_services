@@ -14,8 +14,8 @@ editor_options:
 source("code/syn_11-keyword_trends.r")
 ```
 ```{r eval=T, echo=F, warning=F, message=F}
-plot.simple
-plot.simple2
+#plot.simple
+#plot.simple2
 ```
 
 * Q1. Which line is better? Black line is the line graph. Blue line is the trend line which approximates all the values to create a smoother line.
@@ -23,7 +23,7 @@ plot.simple2
 * Q2. Since 2020 does not have complete value, the trend of 2020 will always be downwards. Suggestion is to remove 2020 from analysis.
 
 ```{r eval=T, echo=F, warning=F, message=F}
-plot.combine
+#plot.combine
 ```
 
 * This is how to looks when you combine it all. For some there will be 3 lines.
@@ -40,13 +40,21 @@ plot.combine
 
 Here are the two keywords I got to work on today. I still have to work on simplifying the axis and providing a legend for reference.
 
-
-
 ```{r eval=T, echo=F, message=F, warning=F}
-agroecology.plot
-agroecosystem.plot
+#agroecology.plot
+#agroecosystem.plot
 ```
 
+## Update 3
+
+```{r eval=T, echo=F, message=F, warning=F}
+plot1
+plot2
+plot3
+plot3
+plot5
+plot6
+```
 ***
 
 
