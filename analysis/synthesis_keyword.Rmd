@@ -3,7 +3,7 @@ title: "HKH - Keyword Trend"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
-    toc: false
+    toc: true
 editor_options:
   chunk_output_type: console
 ---
@@ -29,12 +29,25 @@ plot.combine
 * This is how to looks when you combine it all. For some there will be 3 lines.
 
 ```{r eval=T, echo=F, warning=F, message=F}
-plot.relative
+#plot.relative
 ```
 
 * This is an attempt to keep relative % of keyword trends. I calculate relative trend by finding the proportion of each keyword with respect to the total number of keyword during that year. Let me know if this looks good or if this is too much noise. Each keyword will have 2 lines. While it looks more messy, it does help tell about the attribute of the keyword. 
 
 ***
 
+## Update 2
 
+Here are the two keywords I got to work on today. I still have to work on simplifying the axis and providing a legend for reference.
+
+
+
+```{r eval=T, echo=F, message=F, warning=F}
+agroecology.plot
+agroecosystem.plot
 ```
+
+***
+
+
+

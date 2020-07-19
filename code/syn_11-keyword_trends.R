@@ -94,6 +94,33 @@ names(Agr)[2] <- "Agronomic"
 Gen.agr <- merge(x=Gen, y=Agr, by="Year", all=T) %>% 
   gather(key="Attribute", value="n", 2:3)
 
+Ag <- base3 %>% 
+  select(1,4) %>%
+  na.omit() %>% 
+  group_by(Year) %>% 
+  tally() %>% 
+  ungroup()
+names(Ag)[2] <- "Agriculture"
+
+Soil <- base3 %>% 
+  select(1,6) %>%
+  na.omit() %>% 
+  group_by(Year) %>% 
+  tally() %>% 
+  ungroup()
+names(Soil)[2] <- "Soil"
+
+Water <- base3 %>% 
+  select(1,7) %>%
+  na.omit() %>% 
+  group_by(Year) %>% 
+  tally() %>% 
+  ungroup()
+names(Water)[2] <- "Water"
+
+Agroecosystem <- merge(x=Ag, y=Soil, by="Year", all=T)
+Agroecosystem <- merge(x=Agroecosystem, y=Water, by="Year", all=T)
+
 # Relative Tally ----
 year <- base1 %>% 
   select(1) %>% 
@@ -102,8 +129,21 @@ year <- base1 %>%
 
 Gen.year <- merge(x=Gen, y=year, by="Year") %>% 
   mutate(Relative = (Genetic/n)*100)
+names(Gen.year)[4] <- "Gen_relative"
 
-# GGplot ----
+Agroecology <- merge(x=Gen.year, y=Agr, by="Year", all=T)
+Agroecology.r <- Agroecology %>% 
+  mutate(Agr_relative = (Agronomic/n)*100) %>% 
+  filter(Year < 2020)
+
+Agroecosystem <- merge(x=Agroecosystem, y=year, by="Year", all=T)
+Agroecosystem.r <- Agroecosystem %>%   
+  mutate(Ag_relative = (Agriculture/n)*100, Soil_relative = (Soil/n)*100,
+         Water_relative = (Water/n)*100) %>% 
+  filter(Year < 2020)
+
+#
+# GGplot (Test) ----
 plot.simple <- ggplot(Gen, aes(x=Year, y=Genetic))+
   geom_line()+
   geom_smooth(method = "loess", se=F)+
@@ -115,7 +155,7 @@ plot.simple <- ggplot(Gen, aes(x=Year, y=Genetic))+
         axis.title.y = element_blank(),
         plot.title = element_text(hjust=0.5, face="bold", size=14))+
   scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 15))
-  
+
 plot.simple2 <- ggplot(Agr, aes(x=Year, y=Agronomic))+
   geom_line()+
   geom_smooth(method = "loess", se=F)+
@@ -140,15 +180,31 @@ plot.combine <- ggplot(Gen.agr, aes(x=Year, y=n, color=Attribute))+
         legend.position = c(0.2, 0.7))+
   scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 20))
 
-plot.relative <- ggplot(Gen.year, aes(x=Year))+
-  geom_smooth(aes(y=Genetic), color="Green3", se=F)+
-  geom_smooth(aes(y=Relative), color="Green3", linetype="dashed", se=F)+
-  ggtitle("Genetic")+
+# GGplot Final ----
+agroecology.plot <- ggplot(Agroecology.r, aes(x=Year))+
+  geom_smooth(aes(y=Genetic), color="green4", se=F, size=2)+
+  geom_smooth(aes(y=Agronomic), color="seagreen2", se=F, size=2)+
+  geom_smooth(aes(y=Gen_relative), color="green4", se=F, linetype = "dashed", size=1)+
+  geom_smooth(aes(y=Agr_relative), color="seagreen2", se=F, linetype = "dashed", size=1)+
+  scale_y_continuous("Absolute Trend", 
+                     sec.axis = sec_axis(~.*1, name = "Relative Trend (%)"))+
+  ggtitle("Agroecology")+
   labs(x="")+
   theme_classic(base_size = 12)+
-  theme(axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.title.y = element_blank(),
-        plot.title = element_text(hjust=0.5, face="bold", size=14))+
+  theme(plot.title = element_text(hjust=0.5, face="bold", size=14))+
   scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 15))
 
+agroecosystem.plot <- ggplot(Agroecosystem.r, aes(x=Year))+
+  geom_smooth(aes(y=Agriculture), color="dodgerblue2", se=F, size=2)+
+  geom_smooth(aes(y=Soil), color="turquoise", se=F, size=2)+
+  geom_smooth(aes(y=Water), color="lightslateblue", se=F, size=2)+
+  geom_smooth(aes(y=Ag_relative), color="dodgerblue2", se=F, linetype = "dashed", size=1)+
+  geom_smooth(aes(y=Soil_relative), color="turquoise", se=F, linetype = "dashed", size=1)+
+  geom_smooth(aes(y=Water_relative), color="lightslateblue", se=F, linetype="dashed", size=1)+
+  scale_y_continuous("Absolute Trend", 
+                     sec.axis = sec_axis(~.*1, name = "Relative Trend (%)"))+
+  ggtitle("Agroecosystem")+
+  labs(x="")+
+  theme_classic(base_size = 12)+
+  theme(plot.title = element_text(hjust=0.5, face="bold", size=14))+
+  scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 15))
