@@ -406,3 +406,10 @@ plot6 <- ggplot(Agrobio.r, aes(x=Year))+
   scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 15))+
   scale_color_manual(values=Agrobio.color)+
   geom_hline(yintercept = 50, linetype="dashed", color="grey", size=0.3)
+
+
+
+#write.csv(Agrobio.r, file="output/R-agrobiodiversity.csv")
+
+#ggsave(filename = "final-agrobiodiversity.png", plot=plot6, device = "png", dpi=300,
+#       width = 7, height = 5, units = "in")
