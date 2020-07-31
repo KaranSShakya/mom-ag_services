@@ -26,9 +26,11 @@ scree <- fviz_eig(res.pca, choice="eigenvalue",
          addlabels = TRUE,
          geom="line")
 
-ggsave(filename = "scree_draft1.png", plot=scree, device = "png", dpi=300)
+#ggsave(filename = "scree_draft1.png", plot=scree, device = "png", dpi=300)
 
+correlation <- as.data.frame(cor(pca0[,3:7]))
 
+write.csv(correlation, file="output/correlation-PCA.csv")
 
 
 
