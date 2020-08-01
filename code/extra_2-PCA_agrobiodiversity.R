@@ -30,7 +30,21 @@ scree <- fviz_eig(res.pca, choice="eigenvalue",
 
 correlation <- as.data.frame(cor(pca0[,3:7]))
 
-write.csv(correlation, file="output/correlation-PCA.csv")
+pca3 <- pca0 %>% 
+  select(-1)
+
+shape <- reshape(pca3, timevar = "Acronym", idvar = 2:6, direction = "wide")
+
+t <- as.data.frame(t(pca3))
+
+names(t) <- as.matrix(t[1, ])
+t <- t[-1, ]
+
+corr2 <- read_excel("data/correlation2.xlsx")
+
+correlation2 <- as.data.frame(cor(corr2[,2:33]))
+
+#write.csv(correlation, file="output/correlation-PCA.csv")
 
 
 

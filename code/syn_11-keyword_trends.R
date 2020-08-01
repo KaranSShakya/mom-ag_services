@@ -218,7 +218,8 @@ Agroecology.r <- merge(x=Gen.year, y=Agr.year, by="Year", all=T)
 
 Agroecosystem <- merge(x=Agroecosystem, y=Year, by="Year", all=T)
 
-Agroecosystem.r <- Agroecosystem %>%   
+Agroecosystem.r <- Agroecosystem %>% 
+  filter(Year < 2020) %>% 
   mutate(Ag_relative = (Agriculture/n)*100, Soil_relative = (Soil/n)*100,
          Water_relative = (Water/n)*100, Eco_relative = (Ecosystem/n)*100) 
 
@@ -411,5 +412,21 @@ plot6 <- ggplot(Agrobio.r, aes(x=Year))+
 
 #write.csv(Agrobio.r, file="output/R-agrobiodiversity.csv")
 
-#ggsave(filename = "final-agrobiodiversity.png", plot=plot6, device = "png", dpi=300,
+#ggsave(filename = "explain.png", plot=explain, device = "png", dpi=300,
 #       width = 7, height = 5, units = "in")
+
+explain <- ggplot(Agroecosystem.r, aes(x=Year))+
+  geom_line(aes(y=Ecosystem, color="Ecosystem"), color="red", linetype="dotted", size=1)+
+  geom_smooth(aes(y=Ecosystem, color="Ecosystem"), color="red", se=F)+
+  scale_y_continuous("Absolute Trend", breaks = c(0,70,35), 
+                     sec.axis = sec_axis(~.*1, name = "Relative Trend (%)",
+                                         breaks=c(0,70,35)))+
+  ggtitle("Ecosystem Example")+
+  labs(x="", color="")+
+  theme_classic(base_size = 12)+
+  theme(plot.title = element_text(hjust=0.5, face="bold", size=14),
+        legend.position = c(0.3, 0.88))+
+  scale_x_continuous(limits = c(1995, 2020), breaks=c(1995, 2020, 15))+
+  scale_color_manual(values=Agroecosystem.color)+
+  geom_hline(yintercept = 50, linetype="dashed", color="grey", size=0.3)
+
