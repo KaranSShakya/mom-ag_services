@@ -1,0 +1,52 @@
+---
+title: "Phylogenetic Tree"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: true
+editor_options:
+  chunk_output_type: console
+---
+
+```{r eval=T, echo=F, message=F, warning=F}
+source("code/flora_1-ggtree.R")
+```
+
+## June 24
+
+
+* Using `ggtree` for a phylogenetic tree turned out to be a tougher task. I am still working on creating a working code, but the following are a few drafts.
+
+* The main issue right now is the colors for each group. This will take a little while to solve.
+
+**Figure 1**
+As you suggested, Figure 1 has Order on the outside circle. Since there are not a lot of variations in Order, this figure is smaller.
+
+```{r eval=T, echo=F}
+plot(fig1)
+```
+
+
+**Figure 2**
+To see a bigger diagram, I went one step further, and now the outside circle is Family.
+
+```{r eval=T, echo=F}
+plot(fig2)
+```
+
+
+**Questions**
+
+* Do you still prefer Order or Family as the outside circle?
+
+* Apart from adding the color, do you have any suggestions or changes to the figures?
+
+***
+
+
+
+
+
+
+
+
