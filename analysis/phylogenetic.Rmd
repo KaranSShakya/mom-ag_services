@@ -27,19 +27,23 @@ plot(fig1)
 ```
 
 
-**Figure 2**
-To see a bigger diagram, I went one step further, and now the outside circle is Family.
-
-```{r eval=T, echo=F}
-plot(fig2)
-```
-
-
 **Questions**
 
 * Do you still prefer Order or Family as the outside circle?
 
 * Apart from adding the color, do you have any suggestions or changes to the figures?
+
+***
+
+
+## June 30
+
+I could add the labels with the number of count in brackets.
+
+```{r eval=T, echo=F}
+plot(fig2)
+```
+
 
 ***
 

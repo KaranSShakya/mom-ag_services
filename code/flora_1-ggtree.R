@@ -4,6 +4,7 @@ library(readxl)
 library(ggplot2)
 library(ggtree)
 library(TreeSummarizedExperiment)
+library(stringr)
 
 # library(ape)
 # library(data.tree)
@@ -15,12 +16,20 @@ data.0 <- read_excel("data/flora-raw.xlsx",
 data.1 <- data.0 %>% 
   select(1,2,3) 
 
-data.2 <- data.0 %>% 
-  select(1,2,3,4) 
-data.2dub <- data.2[!duplicated(data.2$family), ]
+data.2 <- data.0 %>%
+  select(1,2,3,4) %>% 
+  group_by(order) %>% 
+  tally() %>% 
+  ungroup()
+
+data.label <- merge(data.1, data.2, by="order")
+data.label$label <- str_c(data.label$order," ", "[", data.label$n, "]")
+data.label2 <- data.label %>% 
+  select(2,3,5)
 
 # ggtree:Order ----
 data.tree <- toTree(data = data.1)
+data.tree2 <- toTree(data = data.label2)
 
 # ggtree(data.tree, layout = "circular")+
 #   geom_text2(aes(label=label), color="red", vjust=1,
@@ -32,11 +41,16 @@ fig1 <- ggtree(data.tree, layout = "circular")+
   geom_nodepoint()+
   geom_tiplab(size=2, aes(angle=angle))
 
-# ggtree:Family ----
-data.tree2 <- toTree(data = data.2dub)
-
 fig2 <- ggtree(data.tree2, layout = "circular")+
-  geom_tiplab(size=1, aes(angle=angle))
+  geom_nodepoint()+
+  geom_tiplab(size=2, aes(angle=angle))
+
+
+# ggtree:Family ----
+# data.tree2 <- toTree(data = data.2dub)
+# 
+# fig2 <- ggtree(data.tree2, layout = "circular")+
+#   geom_tiplab(size=1, aes(angle=angle))
 
 # Examples ----
 ## Example 1 ----
